@@ -107,6 +107,7 @@ function insertarFilaEnFormulario(objeto) {
 
   nuevaCelda = nuevaFilaDeTabla.insertCell(3);
   nuevaCelda.textContent = objeto["monto"];
+  nuevaCelda.setAttribute("id", "celda-monto", ["monto"]);
   nuevaCelda.setAttribute("class", "celda-monto", ["monto"]);
 
   let eliminar = nuevaFilaDeTabla.insertCell(4);
@@ -178,6 +179,24 @@ function sumarIngresos() {
   }
 } */
 
+//FUNCION SUMA DE BALANCE
+
+
+
+function balance(e) {
+  event.preventDefault();
+
+  let montoContainer = document.getElementById('celda-monto').value;
+
+  let monto = {
+      monto: montoContainer,
+  };
+
+  let json = JSON.stringify(monto);
+  localStorage.setItem(monto, json);
+  console.log('Usuario añadido');
+}
+
 //FUNCION BOTON "PIZARRA"
 
 let variablePizarra = document.getElementById("pizarra");
@@ -194,4 +213,14 @@ function salir() {
   variableSalir = window.location.href = "index.html";
 }
 
-//FUNCION PARA CATEGORIAS
+//FUNCION PARA ANIMAR MENU
+
+const list = document.querySelectorAll('.list');
+
+function activeLink() {
+    list.forEach((item) =>
+        item.classList.remove('active'));
+    this.classList.add('active');
+}
+list.forEach((item) =>
+    item.addEventListener('click', activeLink));

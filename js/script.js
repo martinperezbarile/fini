@@ -18,7 +18,7 @@ function iniciarSesion() {
     formularioSignIn.style.display = "none";
 }
 
-// lo nuevo
+// Funciones para loguearse y crear cuenta
 
 function signup(e) {
     event.preventDefault();

@@ -12,6 +12,40 @@
 
 <body class="main-container">
     <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <img src="./img/logo.png" alt="logo">
+            </div>
+            <div class="usuario">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="person-outline" role="img" class="md hydrated" aria-label="person outline"></ion-icon>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <span class="icon">
+                    <ion-icon name="reorder-two-outline" role="img" class="md hydrated" aria-label="reorder two outline"></ion-icon>
+                </span>
+            </div>
+            <div class="card">
+                <span class="icon">
+                    <ion-icon name="trending-up-outline" role="img" class="md hydrated" aria-label="trending up outline"></ion-icon>
+                </span>
+            </div>
+            <div class="card">
+                <span class="icon">
+                    <ion-icon name="trending-down-outline" role="img" class="md hydrated" aria-label="trending down outline"></ion-icon>
+                </span>
+            </div>
+            <div class="card">
+                <span class="icon">
+                    <ion-icon name="analytics-outline" role="img" class="md hydrated" aria-label="analytics outline"></ion-icon>
+                </span>
+            </div>
+        </div>
         <div class="grid-header">
             <div class="fecha-container">
                 <div id="fecha" class="fecha">
@@ -128,6 +162,51 @@
             </div>
         </div>
     </nav>
+    <div class="navigation">
+        <ul>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="text">Inicio</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="pie-chart-outline"></ion-icon>
+                    </span>
+                    <span class="text">Gráficos</span>
+                </a>
+            </li>
+            <li class="list active" data-modal-target="#modal-agregar">
+                <a href="#" data-modal-target="#modal-agregar">
+                    <span class="icon">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                    </span>
+                    <span class="text">Añadir</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="grid-outline"></ion-icon>
+                    </span>
+                    <span class="text">Categorias</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </span>
+                    <span class="text">Configuración</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
     <main id="main" class="main">
         <div class="tabla-container">
             <table id="tabla" class="tabla"></table>
