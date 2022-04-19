@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <title>FINI - Login</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="grid">
+    <div class="container">
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./img/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="titulo">
+            <p>Administra tus finanzas de<br>manera simple, agil e intuitiva</p>
+        </div>
+        <div class="imagen">
+            <img src="./img/ilustracion.png" alt="ilustracion">
+        </div>
+    </div>
+    <div class="form-container">
+        <form id="login" class="form"onsubmit="loginFunction()">
+            <h1>Iniciar sesión</h1>
+            <input class="btn-google" type="button" value="Iniciar sesión con Google">
+            <input class="btn-facebook" type="button" value="Iniciar sesión con Facebook">
+            <p style="text-align: center;">-O-</p>
+            <input id="email-login" name="email" class="input" type="email" placeholder="Email">
+            <input id="password-login" name="password" class="input" type="password" placeholder="Contraseña">
+            <input class="btn" type="submit" value="Iniciar sesión" onclick="iniciarSesionEjemplo()">
+            <p>* Email: coder@house.com &nbsp; Contraseña: coderhouse *</p>
+            <p id="result">¿No tienes una cuenta? <a href="#" onclick="registrarse()">Registrate</a></p>
+        </form>
+        <form id="signin" class="form" onsubmit="signup()">
+            <h1>Crea una cuenta</h1>
+            <input class="btn-google" type="button" value="Registrarse con Google">
+            <input class="btn-facebook" type="button" value="Registrarse con Facebook">
+            <p style="text-align: center;">-O-</p>
+            <input id="name" name="name" class="input" type="text" placeholder="Nombre">
+            <input id="email" name="email" class="input" type="email" placeholder="Email">
+            <input id="password" name="password" class="input" type="password" placeholder="Contraseña">
+            <input id="registrarse" class="btn" type="submit" value="Crear cuenta" onsubmit="loginFunction()">
+            <p>¿Ya tienes una cuenta? <a href="#" onclick="iniciarSesion()">Inicia sesión</a></p>
+        </form>
+    </div>
+
+    <!-- SCRIPT -->
+
+    <script src="./js/script.js"></script>
+
+</body>
+</html>

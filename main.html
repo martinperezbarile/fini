@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <title>FINI - Finanzas personales</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="main-container">
+    <header class="header">
+        <div class="grid-header">
+            <div class="fecha-container">
+                <div id="fecha" class="fecha">
+                    <p id="texto"></p>
+                </div>
+                <div class="espacio-extra"></div>
+            </div>
+            <div class="datos">
+                <div class="grid-datos">
+                    <div class="items-container">
+                        <div class="items-icon">
+                            <ion-icon name="repeat-outline"></ion-icon>
+                        </div>
+                        <div class="items-text">
+                            <input type='text' id="cantidad" value="0">
+                            <div class="items-number">
+                                <p>Items</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ingresos-container">
+                        <div class="ingresos-icon">
+                            <ion-icon name="trending-up-outline"></ion-icon>
+                        </div>
+                        <div class="ingresos-text">
+                            <p id="valor-ingresos">$0,00</p>
+                            <div class="ingresos-number">
+                                <p>Ingresos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="egresos-container">
+                        <div class="egresos-icon">
+                            <ion-icon name="trending-down-outline"></ion-icon>
+                        </div>
+                        <div class="egresos-text">
+                            <p id="valor-egresos">$0,00</p>
+                            <div class="egresos-number">
+                                <p>Egresos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="balance-container">
+                        <div class="balance-icon">
+                            <ion-icon name="analytics-outline"></ion-icon>
+                        </div>
+                        <div class="balance-text">
+                            <p id="valor-balance">$0,00</p>
+                            <div class="balance-number">
+                                <p>Balance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="espacio-vacio"></div>
+                </div>
+            </div>
+            <table class="tabla-base">
+                <tr class="grid-tabla">
+                    <th class="tipo">Tipo</th>
+                    <th class="categoria">Categoría</th>
+                    <th class="nombre">Nombre</th>
+                    <th class="monto">Monto</th>
+                    <th class="vacio"></th>
+                </tr>
+            </table>
+        </div>
+    </header>
+    <nav class="menu">
+        <div class="grid-menu">
+            <a style="text-decoration:none" href="./main.html">
+                <div class="logo">
+                    <img src="./img/logo.png" alt="logo">
+                </div>
+            </a>
+            <div class="texto">
+                <p>MENÚ</p>
+            </div>
+            <div id="pizarra" class="pizarra">
+                <div class="menu-icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>Tabla</p>
+            </div>
+            <div class="graficos" onclick="alertError()">
+                <div class="menu-icon">
+                    <ion-icon name="pie-chart-outline"></ion-icon>
+                </div>
+                <p>Graficos</p>
+            </div>
+            <div class="categorias" onclick="alertError()">
+                <div class="menu-icon">
+                    <ion-icon name="grid-outline"></ion-icon>
+                </div>
+                <p>Categorias</p>
+            </div>
+            <div class="espacio"></div>
+            <div class="usuario" onclick="alertError()">
+                <div class="menu-icon">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+                <p>Usuario</p>
+            </div>
+            <div class="configuracion">
+                <div class="menu-icon">
+                    <ion-icon name="settings-outline"></ion-icon>
+                </div>
+                <p>Configuracion</p>
+            </div>
+            <div id="salir" class="salir" onclick="salir()">
+                <div class="menu-icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>Salir</p>
+            </div>
+        </div>
+    </nav>
+    <main id="main" class="main">
+        <div class="tabla-container">
+            <table id="tabla" class="tabla"></table>
+        </div>
+        <div class="modal" id="modal-agregar">
+            <div class="modal-header">
+                <div class="titulo">Agregar item</div>
+                <button data-close-button class="btn-cerrar">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="formulario">
+                    <div id="campo-formulario" class="tipo-item">
+                        Tipo de transaccion
+                        <input id="ingreso" type="radio" name="tipo" value="↑">
+                        <label for="ingreso">Ingreso</label>
+                        <input id="egreso" type="radio" name="tipo" value="↓">
+                        <label for="egreso">Egreso</label>
+                    </div>
+                    <div id="campo-formulario" class="group">
+                        <label for="nombre">Nombre</label>
+                        <input id="nombre" name="nombre" class="bar">
+                    </div>
+                    <div id="campo-formulario" class="group">
+                        <label for="categoria">Categoria</label>
+                        <input id="categoria" name="categoria" class="bar">
+                    </div>
+                    <div id="campo-formulario" class="group">
+                        <label for="monto">Monto</label>
+                        <input id="monto" name="monto" class="bar">
+                    </div>
+                    <div id="campo-formulario" class="btn-item">
+                        <button data-close-button type="submit" class="btn-envio" onclick="aumentar()">Añadir</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="overlay"></div>
+    </main>
+
+    <footer class="footer">
+        <div id="btn-agregar" class="btn-agregar" data-modal-target="#modal-agregar">
+            <img src="./img/añadir.png" alt="">
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+
+    <script src="./js/main.js"></script>
+
+    <!--  DAY JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.0/dayjs.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.9.4/locale/es.js"></script>
+    <script src="./js/day.js"></script>
+
+    <!-- SWEET ALERT -->
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="./js/sweetAlert.js"></script> -->
+
+    <!-- CHART JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+
+    <!-- IONIC ICONS -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
