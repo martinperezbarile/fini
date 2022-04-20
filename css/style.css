@@ -28,7 +28,7 @@ html {
 body {
     min-height: 100%;
     height: 100%;
-    background-color: var(--lightblue);
+    background-color: var(--lightbluealt);
 }
 
 /* SISTEMA DE GRILLA */
@@ -111,6 +111,11 @@ body {
     color: var(--darkblue);
 }
 
+.login-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
 .btn-google {
     width: 13.5rem;
     height: 2.5rem;
@@ -176,7 +181,7 @@ body {
     width: 100%;
     height: 2.5rem;
     margin: 2rem 0 0 0;
-    background-color: var(--lightblue);
+    background-color: var(--lightbluealt);
     border: none;
     border-radius: 8px;
     font-size: 1.1vw;
@@ -188,4 +193,68 @@ body {
 .btn:hover {
     cursor: pointer;
     background-color: var(--darkblue);
+}
+
+@media only screen and (max-width: 1140px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .container {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 6rem;
+        height: 6rem;
+    }
+    .logo img {
+        width: 4rem;
+        height: 4rem;
+    }
+    .titulo {
+        display: none;
+    }
+    .form {
+        width: 100%;
+        height: 100%;
+        padding: 2rem 4rem 0 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    .form h1 {
+        color: var(--darkblue);
+        font-size: 2rem;
+        margin: 0;
+    }
+    .form p {
+        font-size: .6rem;
+    }
+    .o {
+        display: none;
+    }
+    .input {
+        height: 3rem;
+        font-size: 1.2rem;
+    }
+    .btn {
+        height: 3rem;
+        font-size: 1rem;
+    }
+    .btn-google{
+        display: none;
+    }
+    .btn-facebook {
+        display: none;
+    }
+    .imagen {
+        display: none;
+    }
 }

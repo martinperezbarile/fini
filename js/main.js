@@ -168,34 +168,12 @@ function disminuir() {
   inicio;
 }
 
-//FUNCION SUMA DE INGRESOS
-
-/* let ingresos = document.getElementById('ingreso');
-let sumar = document.getElementById('valor-ingresos');
-
-function sumarIngresos() {
-  if (ingresos.checked) {
-    sumar = monto.value;
-  }
-} */
-
 //FUNCION SUMA DE BALANCE
 
+let montoContainer = document.getElementById('celda-monto');
+let balanceContainer = document.getElementById('valor-balance');
 
-
-function balance(e) {
-  event.preventDefault();
-
-  let montoContainer = document.getElementById('celda-monto').value;
-
-  let monto = {
-      monto: montoContainer,
-  };
-
-  let json = JSON.stringify(monto);
-  localStorage.setItem(monto, json);
-  console.log('Usuario añadido');
-}
+console.log(montoContainer.value);
 
 //FUNCION BOTON "PIZARRA"
 
@@ -224,3 +202,13 @@ function activeLink() {
 }
 list.forEach((item) =>
     item.addEventListener('click', activeLink));
+
+//FUNCION PARA LABELS
+
+function ocultarLabel() {
+    let labels = document.getElementById('label');
+    labels.style.display="none";
+}
+
+//FUNCION FETCH 
+

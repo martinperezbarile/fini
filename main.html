@@ -148,12 +148,6 @@
                 </div>
                 <p>Usuario</p>
             </div>
-            <div class="configuracion">
-                <div class="menu-icon">
-                    <ion-icon name="settings-outline"></ion-icon>
-                </div>
-                <p>Configuracion</p>
-            </div>
             <div id="salir" class="salir" onclick="salir()">
                 <div class="menu-icon">
                     <ion-icon name="log-out-outline"></ion-icon>
@@ -226,16 +220,16 @@
                         <label for="egreso">Egreso</label>
                     </div>
                     <div id="campo-formulario" class="group">
-                        <label for="nombre">Nombre</label>
-                        <input id="nombre" name="nombre" class="bar">
+                        <label id="label" for="nombre">Nombre</label>
+                        <input id="nombre" name="nombre" class="bar" onclick="ocultarLabel()">
                     </div>
                     <div id="campo-formulario" class="group">
-                        <label for="categoria">Categoria</label>
-                        <input id="categoria" name="categoria" class="bar">
+                        <label class="label" for="categoria">Categoria</label>
+                        <input id="categoria" name="categoria" class="bar" onclick="ocultarLabel()">
                     </div>
                     <div id="campo-formulario" class="group">
-                        <label for="monto">Monto</label>
-                        <input id="monto" name="monto" class="bar">
+                        <label class="label" for="monto">Monto</label>
+                        <input id="monto" name="monto" class="bar" onclick="ocultarLabel()">
                     </div>
                     <div id="campo-formulario" class="btn-item">
                         <button data-close-button type="submit" class="btn-envio" onclick="aumentar()">Añadir</button>
