@@ -847,10 +847,22 @@ body.swal2-shown > [aria-hidden="true"] {
     .tabla-base {
         background-color: var(--white);
         grid-area: "tabla-base";
-        height: 2.5rem;
+        height: 3rem;
+        margin: 1rem;
+        border-radius: 1rem;
+        background-color: var(--white);
+        box-shadow: 0px 0px 9px 0px var(--lightgrey);
     }
     .tabla-container {
-        margin-top: 2.5rem;
+        margin-top: 4rem;
+    }
+    .fila-container {
+        height: 3rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        padding-right: .5rem;
+        background-color: var(--white);
+        box-shadow: 0px 0px 9px 0px var(--lightgrey);
     }
     .grid-tabla {
         align-items: center;
@@ -859,6 +871,7 @@ body.swal2-shown > [aria-hidden="true"] {
         display: flex;
         justify-content: space-between;
         padding: 0.5rem 2rem 0.5rem 2rem;
+        
     }
     .vacio {
         display: none;

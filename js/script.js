@@ -60,8 +60,8 @@ function loginFunction(e) {
 
 //Usuario de prueba guardado por defecto
 
-let emailLogin = document.querySelector("#emaillogin");
-let contrasenaLogin = document.querySelector("#contrasenalogin");
+let emailLogin = document.querySelector("#email-login");
+let contrasenaLogin = document.querySelector("#password-login");
 
 function iniciarSesionEjemplo() {
     if (emailLogin.value == "coder@house.com" && contrasenaLogin.value == "coderhouse") {
