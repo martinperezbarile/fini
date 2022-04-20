@@ -68,3 +68,16 @@ function iniciarSesionEjemplo() {
         window.location.href = "main.html";
     }
 }
+
+//Funcion parallax effect
+
+document.addEventListener("mousemove", parallax);
+
+function parallax(e){
+    document.querySelectorAll(".effect").forEach(function(move){
+        let movimientoValue = move.getAttribute("data-value");
+        let x = (e.clientX * movimientoValue) / 250;
+        let y = (e.clientY * movimientoValue) / 250;
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+    });
+}

@@ -75,13 +75,59 @@ body {
     grid-area: imagen;
     width: auto;
     height: auto;
+    transform: translate(9rem);
 }
 
-.imagen img {
-    width: 25rem;
-    height: 25rem;
+/* EFECTO PARALLAX */
+
+.img1 {
+    width: 30rem;
+    height: 30rem;
     float: right;
-    transform: translate(6rem);
+    position: absolute;
+    z-index: 1;
+}
+.img2 {
+    width: 30rem;
+    height: 30rem;
+    float: right;
+    position: absolute;
+    z-index: 2;
+}
+.img3 {
+    width: 30rem;
+    height: 30rem;
+    float: right;
+    position: absolute;
+    z-index: 3;
+}
+.img4 {
+    width: 30rem;
+    height: 30rem;
+    float: right;
+    position: absolute;
+    z-index: 4;
+}
+.img5 {
+    width: 30rem;
+    height: 30rem;
+    float: right;
+    position: absolute;
+    z-index: 5;
+}
+.img6 {
+    width: 30rem;
+    height: 30rem;
+    float: right;
+    position: absolute;
+    z-index: 6;
+}
+.img7 {
+    width: 30rem;
+    height: 30rem;
+    float: right;
+    position: absolute;
+    z-index: 7;
 }
 
 /* FORMULARIO */

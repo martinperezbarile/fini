@@ -311,10 +311,6 @@ body {
     height: 3rem;
 }
 
-.logo img:hover {
-    box-shadow: 0px 0px 31px 1px rgba(232,232,232,0.75);
-}
-
 /* TEXTO "MENU" */
 
 .texto {
@@ -803,6 +799,7 @@ body.swal2-shown > [aria-hidden="true"] {
         align-items: center;
         border-radius: 50%;
         background-color: var(--white);
+        box-shadow: 0px 0px 12px -2px var(--clr);
     }
     
     .usuario a {
@@ -814,7 +811,7 @@ body.swal2-shown > [aria-hidden="true"] {
         position: relative;
         display: block;
         line-height: 75px;
-        font-size: 1.5em;
+        font-size: 1.8em;
         color: var(--clr);
         text-align: center;
         transition: 0.5s;
@@ -836,10 +833,11 @@ body.swal2-shown > [aria-hidden="true"] {
         display: flex;
         align-items: center;
         justify-content: center;
+        box-shadow: 0px 0px 12px -2px var(--darkgrey);
     }
     .card .icon {
         color: var(--clr);
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
     .datos {
         display: none;
