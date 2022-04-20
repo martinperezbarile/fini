@@ -206,6 +206,9 @@ body {
         align-self: center;
         justify-content: center;
     }
+    .form-container {
+        border-radius: 42px 42px 0 0;
+    }
     .logo {
         display: flex;
         align-items: center;

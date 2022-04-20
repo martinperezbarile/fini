@@ -170,10 +170,10 @@ function disminuir() {
 
 //FUNCION SUMA DE BALANCE
 
-let montoContainer = document.getElementById('celda-monto');
+/* let montoContainer = document.getElementById('celda-monto');
 let balanceContainer = document.getElementById('valor-balance');
 
-console.log(montoContainer.value);
+console.log(montoContainer.value); */
 
 //FUNCION BOTON "PIZARRA"
 

@@ -762,7 +762,7 @@ body.swal2-shown > [aria-hidden="true"] {
     }
     .header {
         height: 10rem;
-        background-color: var(--lightblue);
+        background-color: var(--lightbluealt);
         padding: 0;
     }
     .grid-header {
@@ -933,7 +933,7 @@ body.swal2-shown > [aria-hidden="true"] {
         top: -50%;
         width: 70px;
         height: 70px;
-        background: var(--lightblue);
+        background: var(--lightbluealt);
         border-radius: 50%;
         border: 6px solid var(--white);
         transition: 0.5s;
