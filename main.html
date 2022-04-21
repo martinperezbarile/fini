@@ -53,7 +53,7 @@
                 </div>
                 <div class="espacio-extra"></div>
             </div>
-            <div class="datos">
+            <div id="datos" class="datos">
                 <div class="grid-datos">
                     <div class="items-container">
                         <div class="items-icon">
@@ -102,7 +102,7 @@
                     <div class="espacio-vacio"></div>
                 </div>
             </div>
-            <table class="tabla-base">
+            <table id="tabla-base" class="tabla-base">
                 <tr class="grid-tabla">
                     <th class="tipo">Tipo</th>
                     <th class="categoria">Categoría</th>
@@ -123,19 +123,19 @@
             <div class="texto">
                 <p>MENÚ</p>
             </div>
-            <div id="pizarra" class="pizarra">
+            <div id="pizarra" class="pizarra" onclick="mostrarElementos()">
                 <div class="menu-icon">
                     <ion-icon name="log-out-outline"></ion-icon>
                 </div>
                 <p>Tabla</p>
             </div>
-            <div class="graficos" onclick="alertError()">
+            <div class="graficos" onclick="ocultarElementosGraficos()">
                 <div class="menu-icon">
                     <ion-icon name="pie-chart-outline"></ion-icon>
                 </div>
                 <p>Graficos</p>
             </div>
-            <div class="categorias" onclick="alertError()">
+            <div class="categorias" onclick="ocultarElementos()">
                 <div class="menu-icon">
                     <ion-icon name="grid-outline"></ion-icon>
                 </div>
@@ -202,6 +202,82 @@
         </ul>
     </div>
     <main id="main" class="main">
+        <div id="titulo-graf" class="titulo-cat">Graficos</div>
+        <div id="titulo-cat" class="titulo-cat">Categorias</div>
+        <div id="seccion-categorias" class="seccion-categorias">
+            <div class="cat">
+                <div class="cat-icon">
+                    <ion-icon name="briefcase-outline"></ion-icon>
+                </div>
+                <div class="tipo-cat">
+                    <p>Trabajo</p>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="cat-icon">
+                    <ion-icon name="bus-outline"></ion-icon>
+                </div>
+                <div class="tipo-cat">
+                    <p>Transporte</p>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="cat-icon">
+                    <ion-icon name="fast-food-outline"></ion-icon>
+                </div>
+                <div class="tipo-cat">
+                    <p>Alimento</p>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="cat-icon">
+                    <ion-icon name="beer-outline"></ion-icon>
+                </div>
+                <div class="tipo-cat">
+                    <p>Bebidas</p>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="cat-icon">
+                    <ion-icon name="sparkles-outline"></ion-icon>
+                </div>
+                <div class="tipo-cat">
+                    <p>Entretenimiento</p>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="cat-icon">
+                    <ion-icon name="wallet-outline"></ion-icon>
+                </div>
+                <div class="tipo-cat">
+                    <p>Alquiler</p>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="cat-icon">
+                    <ion-icon name="shapes-outline"></ion-icon>
+                </div>
+                <div class="tipo-cat">
+                    <p>Servicios</p>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="cat-icon">
+                    <ion-icon name="barbell-outline"></ion-icon>
+                </div>
+                <div class="tipo-cat">
+                    <p>Deporte</p>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="cat-icon">
+                    <ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>
+                </div>
+                <div class="tipo-cat">
+                    <p>Otros</p>
+                </div>
+            </div>
+        </div>
         <div class="tabla-container">
             <table id="tabla" class="tabla"></table>
         </div>

@@ -183,6 +183,42 @@ function pizarra() {
   variablePizarra = window.location.href = "main.html";
 }
 
+// FUNCIONES PIZARRA GRAFICOS CATEGORIAS
+
+let datos = document.querySelector("#datos");
+let tabla = document.querySelector("#tabla-base");
+let filas = document.querySelector("#tabla");
+let tituloGraficos = document.querySelector("#titulo-graf")
+let secciones = document.querySelector("#seccion-categorias");
+let titulo = document.querySelector("#titulo-cat")
+
+function ocultarElementosGraficos() {
+  datos.style.display = "none";
+  tabla.style.display = "none";
+  filas.style.display = "none";
+  tituloGraficos.style.display = "block";
+  titulo.style.display = "none";
+  secciones.style.display = "none";
+}
+
+function ocultarElementos() {
+  datos.style.display = "none";
+  tabla.style.display = "none";
+  filas.style.display = "none";
+  secciones.style.display = "flex";
+  titulo.style.display = "block";
+  tituloGraficos.style.display = "none";
+}
+
+function mostrarElementos() {
+  datos.style.display = "block";
+  tabla.style.display = "table";
+  filas.style.display = "table";
+  secciones.style.display = "none";
+  titulo.style.display = "none";
+  tituloGraficos.style.display = "none";
+}
+
 //FUNCION BOTON "SALIR"
 
 let variableSalir = document.getElementById("salir");
@@ -209,6 +245,3 @@ function ocultarLabel() {
     let labels = document.getElementById('label');
     labels.style.display="none";
 }
-
-//FUNCION FETCH 
-

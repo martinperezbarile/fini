@@ -21,7 +21,7 @@
             <p>Administra tus finanzas de<br>manera simple, agil e intuitiva</p>
         </div>
         <div class="imagen">
-            <img class="effect img7" src="./img/7.png" alt="ilustracion" data-value="1">
+            <img class="effect img7" src="./img/7.png" alt="ilustracion" data-value="-1">
             <img class="effect img6" src="./img/6.png" alt="ilustracion" data-value="3">
             <img class="effect img5" src="./img/5.png" alt="ilustracion" data-value="-1">
             <img class="effect img4" src="./img/4.png" alt="ilustracion" data-value="2">
@@ -46,8 +46,10 @@
         </form>
         <form id="signin" class="form" onsubmit="signup()">
             <h1>Crea una cuenta</h1>
-            <input class="btn-google" type="button" value="Registrarse con Google">
-            <input class="btn-facebook" type="button" value="Registrarse con Facebook">
+            <div class="login-buttons">
+                <input class="btn-google" type="button" value="Registrarse con Google">
+                <input class="btn-facebook" type="button" value="Registrarse con Facebook">
+            </div>
             <p style="text-align: center;">-O-</p>
             <input id="name" name="name" class="input" type="text" placeholder="Nombre">
             <input id="email" name="email" class="input" type="email" placeholder="Email">
