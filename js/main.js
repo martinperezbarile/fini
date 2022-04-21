@@ -183,7 +183,7 @@ function pizarra() {
   variablePizarra = window.location.href = "main.html";
 }
 
-// FUNCIONES PIZARRA GRAFICOS CATEGORIAS
+// FUNCIONES INICIO PIZARRA GRAFICOS CATEGORIAS
 
 let datos = document.querySelector("#datos");
 let tabla = document.querySelector("#tabla-base");
@@ -211,6 +211,22 @@ function ocultarElementos() {
 }
 
 function mostrarElementos() {
+  datos.style.display = "block";
+  tabla.style.display = "table";
+  filas.style.display = "table";
+  secciones.style.display = "none";
+  titulo.style.display = "none";
+  tituloGraficos.style.display = "none";
+}
+
+function mostrarElementosInicioMD() {
+  tabla.style.display = "table";
+  filas.style.display = "table";
+  secciones.style.display = "none";
+  titulo.style.display = "none";
+  tituloGraficos.style.display = "none";
+}
+function mostrarElementosInicioWD() {
   datos.style.display = "block";
   tabla.style.display = "table";
   filas.style.display = "table";
