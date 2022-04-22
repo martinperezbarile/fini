@@ -80,17 +80,16 @@ body {
     font-weight: 600;
     color: var(--darkblue);
     margin-top: -7rem;
-    margin-bottom: 2rem;
 }
 .graficos-chart {
     display: none;
     flex-direction: row;
-    width: 20rem;
-    height: 10rem;
+    width: 32vw;
+    height: auto;
 }
 .canvas {
-    border: 1px solid lightslategray;
     padding: 1rem;
+    
 }
 
 /* SECCIÓN CATEGORIAS */
@@ -124,6 +123,11 @@ body {
     background: var(--white);
     color: var(--darkblue);
     box-shadow: 0px 0px 9px 0px var(--lightgrey);
+    transition: all .2s ease-in-out;
+}
+.cat:hover {
+    cursor: context-menu;
+    background-color: var(--lightblue);
 }
 .cat-icon {
     margin: 0 0 1rem 0;
@@ -300,4 +304,8 @@ body.swal2-shown > [aria-hidden="true"] {
 }
 .card-container {
     display: none;
+}
+/* CURSOR */
+.c {
+    cursor: context-menu;
 }

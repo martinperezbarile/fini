@@ -25,7 +25,7 @@
             <div class="usuario">
                 <a data-modal-target="#modal-usuario">
                     <span class="icon">
-                        <ion-icon name="person-circle"></ion-icon>
+                        <ion-icon name="person-outline"></ion-icon>
                     </span>
                 </a>
             </div>
@@ -33,7 +33,7 @@
         <div class="card-container">
             <div class="card">
                 <span class="icon">
-                    <ion-icon name="reorder-two-outline"></ion-icon>
+                    <ion-icon name="repeat-outline"></ion-icon>
                 </span>
             </div>
             <div class="card">
@@ -65,8 +65,8 @@
                         <div class="items-icon">
                             <ion-icon name="repeat-outline"></ion-icon>
                         </div>
-                        <div class="items-text">
-                            <input type='text' id="cantidad" value="0">
+                        <div class="items-text c">
+                            <input class="c" type='text' id="cantidad" value="0">
                             <div class="items-number">
                                 <p>Items</p>
                             </div>
@@ -76,7 +76,7 @@
                         <div class="ingresos-icon">
                             <ion-icon name="trending-up-outline"></ion-icon>
                         </div>
-                        <div class="ingresos-text">
+                        <div class="ingresos-text c">
                             <p id="valor-ingresos">$0,00</p>
                             <div class="ingresos-number">
                                 <p>Ingresos</p>
@@ -87,7 +87,7 @@
                         <div class="egresos-icon">
                             <ion-icon name="trending-down-outline"></ion-icon>
                         </div>
-                        <div class="egresos-text">
+                        <div class="egresos-text c">
                             <p id="valor-egresos">$0,00</p>
                             <div class="egresos-number">
                                 <p>Egresos</p>
@@ -98,7 +98,7 @@
                         <div class="balance-icon">
                             <ion-icon name="analytics-outline"></ion-icon>
                         </div>
-                        <div class="balance-text">
+                        <div class="balance-text c">
                             <p id="valor-balance">$0,00</p>
                             <div class="balance-number">
                                 <p>Balance</p>
@@ -109,7 +109,7 @@
                 </div>
             </div>
             <table id="tabla-base" class="tabla-base">
-                <tr class="grid-tabla">
+                <tr class="grid-tabla c">
                     <th class="tipo">Tipo</th>
                     <th class="categoria">Categoría</th>
                     <th class="nombre">Nombre</th>
@@ -126,7 +126,7 @@
                     <img src="./img/logo.png" alt="logo">
                 </div>
             </a>
-            <div class="texto">
+            <div class="texto c">
                 <p>MENÚ</p>
             </div>
             <div id="pizarra" class="pizarra" onclick="mostrarElementos()">
@@ -209,6 +209,10 @@
     </div>
     <main id="main" class="main">
         <div id="titulo-graf" class="titulo-cat">Graficos</div>
+        <div id="graficos-chart" class="graficos-chart">
+            <canvas id="grafica1" class="canvas"></canvas>
+            <canvas id="grafica2" class="canvas"></canvas>
+        </div>
         <div id="titulo-cat" class="titulo-cat">Categorias</div>
         <div id="seccion-categorias" class="seccion-categorias">
             <div class="cat">
@@ -342,10 +346,6 @@
             </div>
         </div>
         <div id="overlay"></div>
-        <div id="graficos-chart" class="graficos-chart">
-            <canvas id="grafica1" class="canvas"></canvas>
-            <canvas id="grafica2" class="canvas"></canvas>
-        </div>
     </main>
 
     <footer class="footer">
