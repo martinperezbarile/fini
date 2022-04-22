@@ -7,7 +7,7 @@
     font-family: 'Telegraf', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* VARIABLES GOBLALES DE COLORES*/
+/* COLORES*/
 
 :root {
     --white: #f8f8f8;
@@ -20,11 +20,9 @@
     --googlecolor: #4285f4;
     --facebookcolor: #3b5998;
 }
-
 html {
     height: 100%;
 }
-
 body {
     min-height: 100%;
     height: 100%;
@@ -39,7 +37,6 @@ body {
     grid-template-areas:
         "body form-container"
 }
-
 .container {
     display: grid;
     grid-template-rows: 5rem 6rem auto;
@@ -48,7 +45,6 @@ body {
         "titulo"
         "imagen";
 }
-
 .logo {
     grid-area: logo;
     width: 3rem;
@@ -56,12 +52,10 @@ body {
     float: left;
     margin: 1rem;
 }
-
 .logo img {
     width: 3rem;
     height: 3rem;
 }
-
 .titulo {
     grid-area: titulo;
     width: auto;
@@ -70,7 +64,6 @@ body {
     font-size: 2.2vw;
     color: var(--white);
 }
-
 .imagen {
     grid-area: imagen;
     width: auto;
@@ -140,28 +133,23 @@ body {
     border-radius: 42px 0 0 42px;
     float: right;
 }
-
 #signin {
     display: none;
 }
-
 .form {
     width: 28rem;
     height: auto;
     margin: 6rem 0 0 12rem;
 }
-
 .form h1 {
     font-size: 2.2vw;
     margin-bottom: 2rem;
     color: var(--darkblue);
 }
-
 .login-buttons {
     display: flex;
     flex-direction: row;
 }
-
 .btn-google {
     width: 13.5rem;
     height: 2.5rem;
@@ -173,12 +161,10 @@ body {
     border-radius: 8px;
     transition: all ease-in-out .2s;
 }
-
 .btn-google:hover {
     cursor: pointer;
     box-shadow: 0 0 1rem var(--shadow);
 }
-
 .btn-facebook {
     width: 13.5rem;
     height: 2.5rem;
@@ -189,28 +175,23 @@ body {
     border-radius: 8px;
     transition: all ease-in-out .2s;
 }
-
 .btn-facebook:hover {
     cursor: pointer;
     box-shadow: 0 0 1rem var(--shadow);
 }
-
 .form p {
     margin-top: 2rem;
     font-size: 1.1vw;
     color: var(--darkgrey);
 }
-
 .form a {
     text-decoration: none;
     color: var(--lightbluealt);
     transition: all ease-in-out .3s;
 }
-
 .form a:hover {
     color: var(--darkblue);
 }
-
 .input {
     display: block;
     width: 100%;
@@ -224,7 +205,6 @@ body {
     border-bottom: 1px solid var(--lightgrey);
     outline: none;
 }
-
 .btn {
     width: 100%;
     height: 2.5rem;
@@ -237,7 +217,6 @@ body {
     color: var(--white);
     transition: all ease-in-out .2s;
 }
-
 .btn:hover {
     cursor: pointer;
     background-color: var(--darkblue);

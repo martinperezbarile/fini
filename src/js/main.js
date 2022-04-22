@@ -188,9 +188,10 @@ function pizarra() {
 let datos = document.querySelector("#datos");
 let tabla = document.querySelector("#tabla-base");
 let filas = document.querySelector("#tabla");
-let tituloGraficos = document.querySelector("#titulo-graf")
+let tituloGraficos = document.querySelector("#titulo-graf");
 let secciones = document.querySelector("#seccion-categorias");
-let titulo = document.querySelector("#titulo-cat")
+let titulo = document.querySelector("#titulo-cat");
+let chart = document.querySelector("#graficos-chart");
 
 function ocultarElementosGraficos() {
   datos.style.display = "none";
@@ -199,6 +200,7 @@ function ocultarElementosGraficos() {
   tituloGraficos.style.display = "block";
   titulo.style.display = "none";
   secciones.style.display = "none";
+  chart.style.display = "flex";
 }
 
 function ocultarElementos() {
@@ -208,6 +210,7 @@ function ocultarElementos() {
   secciones.style.display = "flex";
   titulo.style.display = "block";
   tituloGraficos.style.display = "none";
+  chart.style.display = "none";
 }
 
 function mostrarElementos() {
@@ -217,6 +220,7 @@ function mostrarElementos() {
   secciones.style.display = "none";
   titulo.style.display = "none";
   tituloGraficos.style.display = "none";
+  chart.style.display = "none";
 }
 
 function mostrarElementosInicioMD() {
@@ -225,6 +229,7 @@ function mostrarElementosInicioMD() {
   secciones.style.display = "none";
   titulo.style.display = "none";
   tituloGraficos.style.display = "none";
+  chart.style.display = "none";
 }
 function mostrarElementosInicioWD() {
   datos.style.display = "block";
@@ -233,6 +238,7 @@ function mostrarElementosInicioWD() {
   secciones.style.display = "none";
   titulo.style.display = "none";
   tituloGraficos.style.display = "none";
+  chart.style.display = "none";
 }
 
 //FUNCION BOTON "SALIR"

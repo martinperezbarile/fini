@@ -8,11 +8,12 @@
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <title>FINI - Finanzas personales</title>
     <!-- CSS -->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/mqueries.css">
     <!-- Chart JS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-    <script src="./js/library/chart.js"></script>
 </head>
 
 <body class="main-container">
@@ -341,31 +342,35 @@
             </div>
         </div>
         <div id="overlay"></div>
-        <div id="" class="graficos-chart">
+        <div id="graficos-chart" class="graficos-chart">
             <canvas id="grafica1" class="canvas"></canvas>
             <canvas id="grafica2" class="canvas"></canvas>
         </div>
     </main>
 
     <footer class="footer">
-        <div id="btn-agregar" class="btn-agregar" data-modal-target="#modal-agregar" onclick="mostrarElementosInicioWD()">
+        <div id="btn-agregar" class="btn-agregar" data-modal-target="#modal-agregar"
+            onclick="mostrarElementosInicioWD()">
             <img src="./img/añadir.png" alt="">
         </div>
     </footer>
 
-    <!-- SCRIPT -->
+    <!-- Script -->
     <script src="./js/main.js"></script>
 
-    <!--  DAY JS -->
+    <!--  Day JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.0/dayjs.min.js"></script>
     <script src="https://unpkg.com/dayjs@1.9.4/locale/es.js"></script>
-    <script src="./js/day.js"></script>
+    <script src="./js/library/day.js"></script>
 
-    <!-- SWEET ALERT -->
+    <!-- Chart JS -->
+    <script src="./js/library/chart.js"></script>
+
+    <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- <script src="./js/sweetAlert.js"></script> -->
+    <!-- <script src="./js/library/sweetAlert.js"></script> -->
 
-    <!-- IONIC ICONS -->
+    <!-- Ionic Icons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
