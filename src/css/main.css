@@ -48,7 +48,7 @@ body {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 7fr 7fr 7fr 7fr 1fr;
-    grid-template-areas: "celda-tipo celda-categoria celda-nombre celda-monto btn-eliminar";
+    grid-template-areas: "celda-tipo celda-categoria celda-nombre celda-ingreso btn-eliminar";
     font-size: 0.9em;
     color: rgb(48, 48, 48);
 }
@@ -61,8 +61,8 @@ body {
 .celda-nombre {
     grid-area: celda-nombre;
 }
-.celda-monto {
-    grid-area: celda-monto;
+.celda-ingreso {
+    grid-area: celda-ingreso;
 }
 #btn-eliminar {
     grid-area: btn-eliminar;

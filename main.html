@@ -66,7 +66,7 @@
                             <ion-icon name="repeat-outline"></ion-icon>
                         </div>
                         <div class="items-text c">
-                            <input class="c" type='text' id="cantidad" value="0">
+                            <p id="cantidad" class="c"></p>
                             <div class="items-number">
                                 <p>Items</p>
                             </div>
@@ -208,6 +208,7 @@
         </ul>
     </div>
     <main id="main" class="main">
+        <div class="ejemplojson"></div>
         <div id="titulo-graf" class="titulo-cat">Graficos</div>
         <div id="graficos-chart" class="graficos-chart">
             <canvas id="grafica1" class="canvas"></canvas>
@@ -300,25 +301,25 @@
                 <form id="formulario">
                     <div id="campo-formulario" class="tipo-item">
                         Tipo de transaccion
-                        <input id="ingreso" type="radio" name="tipo" value="↑">
+                        <input id="ingreso" type="radio" name="tipo" value="↑" onclick="mostrarInputIngresos()">
                         <label for="ingreso">Ingreso</label>
-                        <input id="egreso" type="radio" name="tipo" value="↓">
+                        <input id="egreso" type="radio" name="tipo" value="↓" onclick="mostrarInputEgresos()">
                         <label for="egreso">Egreso</label>
                     </div>
                     <div id="campo-formulario" class="group">
-                        <label id="label" for="nombre">Nombre</label>
-                        <input id="nombre" name="nombre" class="bar" onclick="ocultarLabel()">
+                        <input id="nombre" name="nombre" class="bar" placeholder="nombre">
                     </div>
                     <div id="campo-formulario" class="group">
-                        <label class="label" for="categoria">Categoria</label>
-                        <input id="categoria" name="categoria" class="bar" onclick="ocultarLabel()">
+                        <input id="categoria" name="categoria" class="bar" placeholder="Categoria">
                     </div>
                     <div id="campo-formulario" class="group">
-                        <label class="label" for="monto">Monto</label>
-                        <input id="monto" name="monto" class="bar" onclick="ocultarLabel()">
+                        <input id="montoIngresos" name="ingreso" class="bar" placeholder="Monto">
+                    </div>
+                    <div id="campo-formulario" class="group">
+                        <input id="montoEgresos" name="egreso" class="bar" placeholder="Monto de egreso">
                     </div>
                     <div id="campo-formulario" class="btn-item">
-                        <button data-close-button type="submit" class="btn-envio" onclick="aumentar()">Añadir</button>
+                        <button data-close-button type="submit" class="btn-envio">Añadir</button>
                     </div>
                 </form>
             </div>
@@ -335,12 +336,10 @@
             <div class="modal-body">
                 <form id="formulario">
                     <div id="campo-formulario" class="group">
-                        <label id="label" for="nombre">Nombre</label>
-                        <input id="nombre" name="nombre" class="bar" onclick="ocultarLabel()">
+                        <p id="nombreUsuario">Nombre</p>
                     </div>
                     <div id="campo-formulario" class="group">
-                        <label class="label" for="categoria">Email</label>
-                        <input id="categoria" name="categoria" class="bar" onclick="ocultarLabel()">
+                        <p id="emailUsuario">Email</p>
                     </div>
                 </form>
             </div>
@@ -357,6 +356,7 @@
 
     <!-- Script -->
     <script src="./src/js/main.js"></script>
+    <script src="./src/js/login.js"></script>
 
     <!--  Day JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.0/dayjs.min.js"></script>
