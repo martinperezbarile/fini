@@ -22,6 +22,7 @@ cerrarBotonesModal.forEach(button => {
   button.addEventListener('click', () => {
     const modal = button.closest('.modal')
     cerrarModal(modal)
+    window.location.reload();
   })
 })
 
@@ -35,6 +36,21 @@ function cerrarModal(modal) {
   if (modal == null) return
   modal.classList.remove('active')
   overlay.classList.remove('active')
+}
+
+//FUNCION PARA MOSTRAR Y OCULTAR INPUTS MONTO
+
+let montoIngresos = document.getElementById('montoIngresos');
+let montoEgresos = document.getElementById('montoEgresos');
+
+function mostrarInputIngresos() {
+  montoIngresos.style.display = "block";
+  montoEgresos.style.display = "none";
+}
+
+function mostrarInputEgresos() {
+  montoIngresos.style.display = "none";
+  montoEgresos.style.display = "block";
 }
 
 //FUNCION PARA CARGAR DATOS DE FORMULARIO A TABLA
@@ -55,9 +71,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
   let objetoArray = JSON.parse(localStorage.getItem("dataItems"))
   objetoArray.forEach(
     function (elementoArray) {
+
+      // cuenta la cantidad de items
+      let cantidad = document.getElementById("cantidad");
+      cantidad.innerText = objetoArray.length;
+
       insertarFilaEnFormulario(elementoArray)
-      localStorage.setItem("cantidadItems", objetoArray);
-      console.log("items")
     }
   )
 })
@@ -75,16 +94,34 @@ function convertirFormDataAObjeto(datosFormulario) {
   let tipo = datosFormulario.get("tipo")
   let nombre = datosFormulario.get("nombre")
   let categoria = datosFormulario.get("categoria");
-  let monto = datosFormulario.get("monto");
+  let ingreso = datosFormulario.get("ingreso");
+  let egreso = datosFormulario.get("egreso");
   let id = obtenerNuevoId();
   return {
     "tipo": tipo,
     "categoria": categoria,
     "nombre": nombre,
-    "monto": monto,
+    "ingreso": ingreso,
+    "egreso": egreso,
     "id": id
   }
 }
+
+/* let checkBox = document.querySelector('#iddetucheckbox');
+checkBox.addEventListener('change', verificarEstado, false);
+
+function verificarEstado(e) {
+    if(e.target.checked){
+        on();
+    }else{
+        off();
+    }
+}
+
+function tipoDeItem() {
+  let checkboxMonto = document
+  if ()
+} */
 
 function insertarFilaEnFormulario(objeto) {
   let tabla = document.getElementById("tabla");
@@ -106,7 +143,7 @@ function insertarFilaEnFormulario(objeto) {
   nuevaCelda.setAttribute("class", "celda-nombre", ["nombre"]);
 
   nuevaCelda = nuevaFilaDeTabla.insertCell(3);
-  nuevaCelda.textContent = objeto["monto"];
+  nuevaCelda.textContent = objeto["ingreso"];
   nuevaCelda.setAttribute("id", "celda-monto", ["monto"]);
   nuevaCelda.setAttribute("class", "celda-monto", ["monto"]);
 
@@ -119,7 +156,7 @@ function insertarFilaEnFormulario(objeto) {
 
   //FUNCION BORRAR FILA
 
-  //al hacer click en el boton eliminar, "agarra" la fila, luego toma el valor de data-id
+  //al hacer click en el boton eliminar, toma la fila, luego toma el valor de data-id
   botonEliminar.addEventListener("click", (event) => {
     let fila = event.target.parentNode.parentNode;
     let id = fila.getAttribute("data-id");
@@ -143,6 +180,7 @@ function eliminarDatos(id) {
   let arrayJSON = JSON.stringify(miArray);
   //guardo mi array de transaccion en formato JSON en el localstorage
   localStorage.setItem("dataItems", arrayJSON);
+  window.location.reload();
 }
 
 //FUNCION GUARDAR ELEMENTO EN EL ARRAY DE LOCALSTORAGE
@@ -153,27 +191,6 @@ function guardarDatos(objeto) {
   let arrayJSON = JSON.stringify(miArray);
   localStorage.setItem("dataItems", arrayJSON);
 }
-
-//FUNCION INCREMENTO Y DECREMENTO DE ITEMS
-
-let inicio = 0;
-
-function aumentar() {
-  let cantidad = document.getElementById('cantidad').value = ++
-  inicio;
-}
-
-function disminuir() {
-  let cantidad = document.getElementById('cantidad').value = --
-  inicio;
-}
-
-//FUNCION SUMA DE BALANCE
-
-/* let montoContainer = document.getElementById('celda-monto');
-let balanceContainer = document.getElementById('valor-balance');
-
-console.log(montoContainer.value); */
 
 //FUNCION BOTON "PIZARRA"
 

@@ -121,7 +121,7 @@
     </header>
     <nav class="menu">
         <div class="grid-menu">
-            <a style="text-decoration:none" href="./main.html">
+            <a href="./main.html">
                 <div class="logo">
                     <img src="./src/img/logo.png" alt="logo">
                 </div>
@@ -301,22 +301,34 @@
                 <form id="formulario">
                     <div id="campo-formulario" class="tipo-item">
                         Tipo de transaccion
-                        <input id="ingreso" type="radio" name="tipo" value="↑" onclick="mostrarInputIngresos()">
+                        <input id="ingreso" type="radio" name="tipo" value="↑" checked onclick="mostrarInputIngresos()">
                         <label for="ingreso">Ingreso</label>
                         <input id="egreso" type="radio" name="tipo" value="↓" onclick="mostrarInputEgresos()">
                         <label for="egreso">Egreso</label>
                     </div>
                     <div id="campo-formulario" class="group">
-                        <input id="nombre" name="nombre" class="bar" placeholder="nombre">
+                        <input id="nombre" name="nombre" class="bar" placeholder="nombre" minlength="2">
+                    </div>
+                    <div id="campo-formulario" class="group"> 
+                        <select id="categoria" name="categoria" class="bar-select" placeholder="Categoria">
+                            <option hidden selected>Selecciona una categoria</option>
+                            <option value="Trabajo">Trabajo</option>
+                            <option value="Transporte">Transporte</option>
+                            <option value="Alimento">Alimento</option>
+                            <option value="Bebidas">Bebidas</option>
+                            <option value="Entretenimiento">Entretenimiento</option>
+                            <option value="Alquiler">Alquiler</option>
+                            <option value="Servicios">Servicios</option>
+                            <option value="Deporte">Deporte</option>
+                            <option value="Otros">Otros</option>
+                        </select>
                     </div>
                     <div id="campo-formulario" class="group">
-                        <input id="categoria" name="categoria" class="bar" placeholder="Categoria">
+                        <input id="montoIngresos" type="number" name="ingreso" class="bar" placeholder="Monto">
                     </div>
                     <div id="campo-formulario" class="group">
-                        <input id="montoIngresos" name="ingreso" class="bar" placeholder="Monto">
-                    </div>
-                    <div id="campo-formulario" class="group">
-                        <input id="montoEgresos" name="egreso" class="bar" placeholder="Monto de egreso">
+                        <input id="montoEgresos" type="number" name="egreso" class="bar" placeholder="Monto de egreso"
+                            style="display:none;">
                     </div>
                     <div id="campo-formulario" class="btn-item">
                         <button data-close-button type="submit" class="btn-envio">Añadir</button>
