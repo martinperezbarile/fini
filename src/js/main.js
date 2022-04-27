@@ -1,4 +1,4 @@
-//FUNCION PARA MOSTRAR VENTANA EMERGENTE
+//Funcion para abrir modal popup
 
 const abrirBotonesModal = document.querySelectorAll('[data-modal-target]')
 const cerrarBotonesModal = document.querySelectorAll('[data-close-button]')
@@ -38,7 +38,7 @@ function cerrarModal(modal) {
   overlay.classList.remove('active')
 }
 
-//FUNCION PARA MOSTRAR Y OCULTAR INPUTS MONTO
+//Funcion para mostrar y ocultar inputs - ingreso o egreso
 
 let montoIngresos = document.getElementById('montoIngresos');
 let montoEgresos = document.getElementById('montoEgresos');
@@ -53,7 +53,7 @@ function mostrarInputEgresos() {
   montoEgresos.style.display = "block";
 }
 
-//FUNCION PARA CARGAR DATOS DE FORMULARIO A TABLA
+//Funcion para cargar datos de formulario a tabla
 
 const form = document.getElementById("formulario");
 
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   objetoArray.forEach(
     function (elementoArray) {
 
-      // cuenta la cantidad de items
+      //Cuenta la cantidad de items
       let cantidad = document.getElementById("cantidad");
       cantidad.innerText = objetoArray.length;
 
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   )
 })
 
-//FUNCION QUE ASIGNA ID A ELEMENTO TR (FILA)
+//Funcion que asigna ID a elemento TR (fila)
 
 function obtenerNuevoId() {
   let ultimoId = localStorage.getItem("ultimoId") || "-1"
@@ -111,17 +111,19 @@ function convertirFormDataAObjeto(datosFormulario) {
 checkBox.addEventListener('change', verificarEstado, false);
 
 function verificarEstado(e) {
-    if(e.target.checked){
-        on();
-    }else{
-        off();
-    }
+  if (e.target.checked) {
+    on();
+  } else {
+    off();
+  }
 }
 
 function tipoDeItem() {
   let checkboxMonto = document
   if ()
 } */
+
+//Funcion que añade fila a la tabla
 
 function insertarFilaEnFormulario(objeto) {
   let tabla = document.getElementById("tabla");
@@ -154,9 +156,9 @@ function insertarFilaEnFormulario(objeto) {
   botonEliminar.setAttribute("onclick", "disminuir();");
   eliminar.appendChild(botonEliminar)
 
-  //FUNCION BORRAR FILA
+  //Funcion para borrar fila
 
-  //al hacer click en el boton eliminar, toma la fila, luego toma el valor de data-id
+  //Al hacer click en el boton eliminar, toma la fila, luego toma el valor de data-id
   botonEliminar.addEventListener("click", (event) => {
     let fila = event.target.parentNode.parentNode;
     let id = fila.getAttribute("data-id");
@@ -165,10 +167,9 @@ function insertarFilaEnFormulario(objeto) {
   })
 }
 
-//FUNCION BORRAR ELEMENTO EN EL ARRAY DE LOCALSTORAGE
+//Funcion para borrar elemento en el array de localstorage
 
 //le paso como parametro el id de el item que quiero eliminar
-
 function eliminarDatos(id) {
   //obtengo los items de mi "base de datos"
   let miArray = JSON.parse(localStorage.getItem("dataItems"))
@@ -183,7 +184,7 @@ function eliminarDatos(id) {
   window.location.reload();
 }
 
-//FUNCION GUARDAR ELEMENTO EN EL ARRAY DE LOCALSTORAGE
+//Funcion para guardar elemento en el array de localstorage
 
 function guardarDatos(objeto) {
   let miArray = JSON.parse(localStorage.getItem("dataItems")) || [];
@@ -192,15 +193,14 @@ function guardarDatos(objeto) {
   localStorage.setItem("dataItems", arrayJSON);
 }
 
-//FUNCION BOTON "PIZARRA"
-
-let variablePizarra = document.getElementById("pizarra");
+//Pizarra
 
 function pizarra() {
+  let variablePizarra = document.getElementById("pizarra");
   variablePizarra = window.location.href = "main.html";
 }
 
-// FUNCIONES INICIO PIZARRA GRAFICOS CATEGORIAS
+//Funcion para mostrar y ocultar diferentes secciones de la pagina
 
 let datos = document.querySelector("#datos");
 let tabla = document.querySelector("#tabla-base");
@@ -248,6 +248,7 @@ function mostrarElementosInicioMD() {
   tituloGraficos.style.display = "none";
   chart.style.display = "none";
 }
+
 function mostrarElementosInicioWD() {
   datos.style.display = "block";
   tabla.style.display = "table";
@@ -260,27 +261,7 @@ function mostrarElementosInicioWD() {
 
 //FUNCION BOTON "SALIR"
 
-let variableSalir = document.getElementById("salir");
-
 function salir() {
+  let variableSalir = document.getElementById("salir");
   variableSalir = window.location.href = "index.html";
-}
-
-//FUNCION PARA ANIMAR MENU
-
-const list = document.querySelectorAll('.list');
-
-function activeLink() {
-    list.forEach((item) =>
-        item.classList.remove('active'));
-    this.classList.add('active');
-}
-list.forEach((item) =>
-    item.addEventListener('click', activeLink));
-
-//FUNCION PARA LABELS
-
-function ocultarLabel() {
-    let labels = document.getElementById('label');
-    labels.style.display="none";
 }

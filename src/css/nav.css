@@ -13,7 +13,7 @@
     display: grid;
     height: 100%;
     grid-template:
-        "logo" 5rem "texto" 2.5rem "pizarra" 2.5rem "graficos" 2.5rem "categorias" 2.5rem "espacio" auto "usuario" 2.5rem "salir" 2.5rem;
+        "logo" 5rem "texto" 2.5rem "pizarra" 2.5rem "graficos" 2.5rem "categorias" 2.5rem "espacio" auto "salir" 2.5rem;
 }
 .menu-icon {
     width: 1.5rem;
@@ -95,24 +95,6 @@
     cursor: pointer;
 }
 .categorias-img {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: .5rem .5rem .5rem 0;
-    padding-right: 2rem;
-}
-.usuario {
-    grid-area: usuario;
-    padding-left: 1rem;
-    display: flex;
-    align-items: center;
-    font-size: 0.9em;
-    color: #f8f8f8;
-    transition: .2s ease-in-out;
-}
-.usuario:hover {
-    cursor: pointer;
-}
-.usuario-img {
     width: 1.5rem;
     height: 1.5rem;
     margin: .5rem .5rem .5rem 0;
