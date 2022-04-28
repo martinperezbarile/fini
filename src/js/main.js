@@ -61,7 +61,6 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
   let datosFormulario = new FormData(form);
   let objeto = convertirFormDataAObjeto(datosFormulario);
-  console.log(objeto);
   guardarDatos(objeto);
   insertarFilaEnFormulario(objeto);
   form.reset();
@@ -75,6 +74,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
       //Cuenta la cantidad de items
       let cantidad = document.getElementById("cantidad");
       cantidad.innerText = objetoArray.length;
+
+      //Cuenta los ingresos, egresos y balance
+      let ingresos = document.getElementById("valor-ingresos");
+      let egresos = document.getElementById("valor-egresos");
+      let balance = document.getElementById("valor-balance");
+
+      let sumaIngresos = 0;
+      objetoArray.forEach(elem => sumaIngresos += elem.ingreso);
+      ingresos.innerText = "$" + sumaIngresos;
+
+      let sumaEgresos = 0;
+      objetoArray.forEach(elem => sumaEgresos += elem.egreso);
+      egresos.innerText = "$" + sumaEgresos;
+
+      let operacionBalance = sumaIngresos - sumaEgresos;
+      balance.innerText = "$" + operacionBalance;
 
       insertarFilaEnFormulario(elementoArray)
     }
@@ -101,27 +116,11 @@ function convertirFormDataAObjeto(datosFormulario) {
     "tipo": tipo,
     "categoria": categoria,
     "nombre": nombre,
-    "ingreso": ingreso,
-    "egreso": egreso,
+    "ingreso": (parseInt(ingreso)),
+    "egreso": (parseInt(egreso)),
     "id": id
   }
 }
-
-/* let checkBox = document.querySelector('#iddetucheckbox');
-checkBox.addEventListener('change', verificarEstado, false);
-
-function verificarEstado(e) {
-  if (e.target.checked) {
-    on();
-  } else {
-    off();
-  }
-}
-
-function tipoDeItem() {
-  let checkboxMonto = document
-  if ()
-} */
 
 //Funcion que añade fila a la tabla
 
@@ -145,7 +144,11 @@ function insertarFilaEnFormulario(objeto) {
   nuevaCelda.setAttribute("class", "celda-nombre", ["nombre"]);
 
   nuevaCelda = nuevaFilaDeTabla.insertCell(3);
-  nuevaCelda.textContent = objeto["ingreso"];
+  if (objeto.ingreso == null) {
+    nuevaCelda.textContent = objeto["egreso"];
+  } else {
+    nuevaCelda.textContent = objeto["ingreso"];
+  }
   nuevaCelda.setAttribute("id", "celda-monto", ["monto"]);
   nuevaCelda.setAttribute("class", "celda-monto", ["monto"]);
 
