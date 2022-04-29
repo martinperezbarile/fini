@@ -51,6 +51,7 @@ body {
     grid-template-areas: "celda-tipo celda-categoria celda-nombre celda-ingreso btn-eliminar";
     font-size: .8rem;
     color: rgb(48, 48, 48);
+    cursor: context-menu;
 }
 .celda-tipo {
     grid-area: celda-tipo;
@@ -82,6 +83,7 @@ body {
     margin-top: -7rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    cursor: context-menu;
 }
 .seccion-categorias {
     width: 100%;
@@ -105,6 +107,7 @@ body {
 .tipo-cat {
     padding: 0 0 0 1rem;
     font-size: .9rem;
+    cursor: context-menu;
 }
 
 /* MODAL */
