@@ -295,10 +295,9 @@
         width: 90%;
     }
 }
-/* DISPOSITIVOS MEDIANOS (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 690px) {
     .main-container {
-        grid-template-columns: 25% auto;
+        grid-template-columns: 20% auto;
         grid-template-rows: 12.5rem auto 5rem;
         grid-template-areas:
             "menu header"

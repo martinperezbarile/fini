@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Telegraf', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* COLORES*/
@@ -26,7 +26,7 @@ html {
 body {
     min-height: 100%;
     height: 100%;
-    background-color: var(--lightbluealt);
+    background-color: var(--darkblue);
 }
 
 /* SISTEMA DE GRILLA */
@@ -123,6 +123,10 @@ body {
     z-index: 7;
 }
 
+.welcome {
+    display: none;
+}
+
 /* FORMULARIO */
 
 .form-container {
@@ -142,68 +146,79 @@ body {
 .form {
     width: 28rem;
     height: auto;
+    flex-direction: column;
 }
-.form h1 {
-    font-size: 2.2vw;
-    margin-bottom: 2rem;
+.login-text h1 {
+    font-size: 2rem;
     color: var(--darkblue);
+    margin: 0 0 1rem 0;
 }
-.form p {
-    margin-top: 2rem;
-    font-size: 1.1vw;
+.login-text p {
+    font-size: 1rem;
     color: var(--darkgrey);
 }
-.form a {
-    text-decoration: none;
-    color: var(--lightbluealt);
-    transition: all ease-in-out .3s;
+.new-account {
+    margin: 0;
 }
-.form a:hover {
+.new-account a {
+    text-decoration: none;
     color: var(--darkblue);
+    font-weight: 600;
+}
+.login-account {
+    margin: 0;
+}
+.login-account a {
+    text-decoration: none;
+    color: var(--darkblue);
+    font-weight: 600;
+}
+.input-data {
+    margin: 3rem 0 0 0;
+}
+.input-data label{
+    color: var(--darkgrey);
 }
 .input {
     display: block;
     width: 100%;
     height: 2.5rem;
-    margin: 1rem 0 0 0;
+    margin: 1rem 0 1rem 0;
     padding: 0 0 0 1rem;
     font-size: 1.1vw;
     border-radius: 8px;
     background: none;
     border: none;
-    border-bottom: 1px solid var(--lightgrey);
+    background-color: rgb(240, 240, 240);
     outline: none;
 }
 .btn {
     width: 100%;
     height: 2.5rem;
-    margin: 2rem 0 0 0;
-    background-color: var(--lightbluealt);
+    margin: 2rem 0 3rem 0;
     border: none;
     border-radius: 8px;
-    font-size: 1.1vw;
-    font-weight: 600;
-    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: var(--darkblue);
+    color: #fff;
     transition: all ease-in-out .2s;
 }
 .btn:hover {
     cursor: pointer;
-    background-color: var(--darkblue);
+    background-color: var(--lightbluealt);
 }
 
 @media only screen and (max-width: 1140px) {
     .grid {
         display: flex;
         flex-direction: column;
-        
+        align-items: center;
     }
     .container {
         display: flex;
         align-self: center;
         justify-content: center;
-    }
-    .form-container {
-        border-radius: 42px 42px 0 0;
     }
     .logo {
         display: flex;
@@ -219,36 +234,129 @@ body {
     .titulo {
         display: none;
     }
-    .form {
+    /* WELCOME */
+    .img {
         width: 100%;
+        height: 20rem;
+        display: flex;
+        justify-content: center;
+    }
+    .img img {
+        display: flex;
+        width: 40vh;
+        height: auto;
+    }
+    .welcome {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .welcome-text {
+        display: flex;
+        flex-direction: column;
+    }
+    .welcome-text h1 {
+        display: flex;
+        color: #fff;
+        margin: 1rem 0 2rem 0;
+    }
+    .welcome-text p {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        line-height: 1.5rem;
+        letter-spacing: 1px;
+    }
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0 0 0;
+    }
+    .buttons input {
+        width: 100%;
+        height: 2.5rem;
+        border: none;
+        border-radius: .5rem;
+        margin: 1rem 0 0 0;
+    }
+    .buttons input:nth-child(1) {
+        font-weight: 600;
+        font-size: 1rem;
+        background-color: #fff;
+        color: var(--darkblue);
+    }
+    .buttons input:nth-child(2) {
+        font-weight: 600;
+        font-size: 1rem;
+        border: 3px solid #fff;
+        background-color: transparent;
+        color: #fff;
+    }
+    .form-container {
+        display: none;
+        border-radius: 42px 42px 0 0;
+    }
+    /* FORM */
+    #login {
+        display: none;
+    }
+    .form {
+        width: 80%;
         height: 100%;
-        padding: 2rem 4rem 0 4rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
         margin: auto;
     }
-    .form h1 {
+    .login-text h1 {
+        width: 100%;
+        font-size: 1.4rem;
+        margin: 0 0 1rem 0;
         color: var(--darkblue);
-        font-size: 2rem;
-        margin-bottom: 1rem;
     }
-    .form p {
-        font-size: .6rem;
+    .login-text p {
+        width: 100%;
+        font-size: 1rem;
+        margin: 0;
+    }
+    .input-data {
+        width: 100%;
+    }
+    .input-data label {
+        font-size: 1rem;
+        color: var(--darkgrey);
+        margin: 2rem 0 1rem 0;
     }
     .input {
-        height: 3rem;
-        font-size: 1.2rem;
+        height: 2.5rem;
+        font-size: 1rem;
+        margin: 1rem 0 1rem 0;
+        background-color:rgb(240, 240, 240);
+        border-bottom: 0;
     }
     .btn {
-        height: 3rem;
+        height: 2.5rem;
+        margin: 2rem 0 0 0;
+        font-size: 1rem;
+        background-color: var(--darkblue);
+        color: #fff;
+    }
+    .new-account {
         font-size: 1rem;
     }
-    .btn-google{
-        display: none;
+    .login-account {
+        font-size: 1rem;
     }
-    .btn-facebook {
-        display: none;
+    .login-account a {
+        text-decoration: none;
+        color: var(--darkblue);
+        font-weight: 600;
     }
     .imagen {
         display: none;

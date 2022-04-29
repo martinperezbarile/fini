@@ -1,20 +1,25 @@
 //Variables para llamar formularios
 
-let contenedor = document.querySelector("#form-container");
+let welcome = document.querySelector("#welcome");
+let formContainer = document.querySelector("#form-container");
 let formularioSignIn = document.querySelector("#signin");
 let formularioLogin = document.querySelector("#login");
 
 //Funcion para ocultar formulario de inicio de sesion y mostrar el de registro
 
 function registrarse() {
+    welcome.style.display = "none";
+    formContainer.style.display = "flex";
     formularioLogin.style.display = "none";
-    formularioSignIn.style.display = "block";
+    formularioSignIn.style.display = "flex";
 }
 
 //Funcion para ocultar formulario de registro y mostrar el de inicio de sesion
 
 function iniciarSesion() {
-    formularioLogin.style.display = "block";
+    welcome.style.display = "none";
+    formContainer.style.display = "flex";
+    formularioLogin.style.display = "flex";
     formularioSignIn.style.display = "none";
 }
 
@@ -55,17 +60,6 @@ function loginFunction(e) {
         window.location="main.html"
     }else {
         result.innerHTML = "Contraseña incorrecta";
-    }
-}
-
-//Usuario de prueba guardado por defecto
-
-let emailLogin = document.querySelector("#email-login");
-let contrasenaLogin = document.querySelector("#password-login");
-
-function iniciarSesionEjemplo() {
-    if (emailLogin.value == "coder@house.com" && contrasenaLogin.value == "coderhouse") {
-        window.location.href = "main.html";
     }
 }
 

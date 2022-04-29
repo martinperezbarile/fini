@@ -14,7 +14,7 @@
     <div class="container">
         <div class="logo">
             <a href="./index.html">
-                <img src="./src/img/logo.png" alt="logo">
+                <img src="./src/img/logo-alt.png" alt="logo">
             </a>
         </div>
         <div class="titulo">
@@ -30,22 +30,51 @@
             <img class="effect img1" src="./src/img/1.png" alt="ilustracion" data-value="1">
         </div>
     </div>
-    <div class="form-container">
+    <div class="welcome" id="welcome">
+        <div class="img">
+            <img class="effect img7" src="./src/img/ilustracion1.png" alt="ilustracion">
+        </div>
+        <div class="welcome-text">
+            <h1>¡Bienvenidx!</h1>
+            <p>Administra tus finanzas de manera<br><b>simple, agil e intuitiva</b></p>
+        </div>
+        <div class="btn-container">
+            <div class="buttons">
+                <input type="button" value="Inicia sesión" onclick="iniciarSesion()">
+                <input type="button" value="Crea una cuenta" onclick="registrarse()">
+            </div>
+        </div>
+    </div>
+    <div id="form-container" class="form-container">
         <form id="login" class="form" onsubmit="loginFunction()">
-            <h1>Iniciar sesión</h1>
-            <input id="email-login" name="email" class="input" type="email" placeholder="Email">
-            <input id="password-login" name="password" class="input" type="password" placeholder="Contraseña">
-            <input class="btn" type="submit" value="Iniciar sesión" onclick="iniciarSesionEjemplo()">
-            <p>* Email: coder@house.com &nbsp; Contraseña: coderhouse *</p>
-            <p id="result">¿No tienes una cuenta? <a href="#" onclick="registrarse()">Registrate</a></p>
+            <div class="login-text">
+                <h1>¡Que bueno verte de nuevo!</h1>
+                <p>Ingresa tus datos para continuar</p>
+            </div>
+            <div class="input-data">
+                <label for="email">Email</label>
+                <input id="email-login" name="email" class="input" type="email" placeholder="Ingresa tu email">
+                <label for="password">Contraseña</label>
+                <input id="password-login" name="password" class="input" type="password" placeholder="Ingresa tu contraseña">
+                <input class="btn" type="submit" value="Iniciar sesión" onclick="iniciarSesionEjemplo()">
+            </div>
+            <p class="new-account" id="result">¿No tienes una cuenta? <a href="#" onclick="registrarse()">Registrate</a></p>
         </form>
         <form id="signin" class="form" onsubmit="signup()">
-            <h1>Crea una cuenta</h1>
-            <input id="name" name="name" class="input" type="text" placeholder="Nombre">
-            <input id="email" name="email" class="input" type="email" placeholder="Email">
-            <input id="password" name="password" class="input" type="password" placeholder="Contraseña">
-            <input id="registrarse" class="btn" type="submit" value="Crear cuenta" onsubmit="loginFunction()" onclick="iniciarSesion()">
-            <p>¿Ya tienes una cuenta? <a href="#" onclick="iniciarSesion()">Inicia sesión</a></p>
+            <div class="login-text">
+                <h1>¿Aun no te haz registrado?</h1>
+                <p>Ingresa tus datos y crea una cuenta</p>
+            </div>
+            <div class="input-data">
+                <label for="name">Nombre</label>
+                <input id="name" name="name" class="input" type="text" placeholder="Ingresa tu nombre">
+                <label for="email">Email</label>
+                <input id="email" name="email" class="input" type="email" placeholder="Ingresa tu email">
+                <label for="password">Contraseña</label>
+                <input id="password" name="password" class="input" type="password" placeholder="Crea una contraseña">
+                <input id="registrarse" class="btn" type="submit" value="Crear cuenta" onsubmit="loginFunction()" onclick="iniciarSesion()">
+            </div>
+            <p class="login-account">¿Ya tienes una cuenta? <a href="#" onclick="iniciarSesion()">Inicia sesión</a></p>
         </form>
     </div>
 

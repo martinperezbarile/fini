@@ -7,13 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="shortcut icon" href="./src/img/logo.png" type="image/x-icon">
     <title>FINI - Finanzas personales</title>
-    <!-- CSS -->
     <link rel="stylesheet" href="./src/css/header.css">
     <link rel="stylesheet" href="./src/css/nav.css">
     <link rel="stylesheet" href="./src/css/main.css">
     <link rel="stylesheet" href="./src/css/mqueries.css">
-    <!-- Chart JS -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 </head>
 
 <body class="main-container">
@@ -22,34 +19,19 @@
             <div class="logo">
                 <img src="./src/img/logo.png" alt="logo">
             </div>
-            <div class="usuario">
-                <a data-modal-target="#modal-usuario">
-                    <span class="icon">
-                        <ion-icon name="person-outline"></ion-icon>
-                    </span>
-                </a>
-            </div>
         </div>
         <div class="card-container">
             <div class="card">
-                <span class="icon">
-                    <ion-icon name="repeat-outline"></ion-icon>
-                </span>
+                <p id="cantidad" class="c">0</p>
             </div>
             <div class="card">
-                <span class="icon">
-                    <ion-icon name="trending-up-outline"></ion-icon>
-                </span>
+                <p id="valor-ingresos"></p>
             </div>
             <div class="card">
-                <span class="icon">
-                    <ion-icon name="trending-down-outline"></ion-icon>
-                </span>
+                <p id="valor-egresos"></p>
             </div>
             <div class="card">
-                <span class="icon">
-                    <ion-icon name="analytics-outline"></ion-icon>
-                </span>
+                <p id="valor-balance"></p>
             </div>
         </div>
         <div class="grid-header">
@@ -126,20 +108,11 @@
                     <img src="./src/img/logo.png" alt="logo">
                 </div>
             </a>
-            <div class="texto c">
-                <p>MENÚ</p>
-            </div>
             <div id="pizarra" class="pizarra" onclick="mostrarElementos()">
                 <div class="menu-icon">
                     <ion-icon name="log-out-outline"></ion-icon>
                 </div>
                 <p>Tabla</p>
-            </div>
-            <div class="graficos" onclick="ocultarElementosGraficos()">
-                <div class="menu-icon">
-                    <ion-icon name="pie-chart-outline"></ion-icon>
-                </div>
-                <p>Graficos</p>
             </div>
             <div class="categorias" onclick="ocultarElementos()">
                 <div class="menu-icon">
@@ -364,16 +337,10 @@
     <script src="./src/js/main.js"></script>
     <script src="./src/js/login.js"></script>
 
-    <!-- JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
     <!--  Day JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.0/dayjs.min.js"></script>
     <script src="https://unpkg.com/dayjs@1.9.4/locale/es.js"></script>
     <script src="./src/js/library/day.js"></script>
-
-    <!-- Chart JS -->
-    <script src="./src/js/library/chart.js"></script>
 
     <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

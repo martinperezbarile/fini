@@ -13,7 +13,7 @@
     display: grid;
     height: 100%;
     grid-template:
-        "logo" 5rem "texto" 2.5rem "pizarra" 2.5rem "graficos" 2.5rem "categorias" 2.5rem "espacio" auto "salir" 2.5rem;
+        "logo" 5rem "texto" 2.5rem "pizarra" 2.5rem "categorias" 2.5rem "espacio" auto "salir" 2.5rem;
 }
 .menu-icon {
     width: 1.5rem;
@@ -49,34 +49,12 @@
 }
 .pizarra:hover {
     background-color: rgba(0, 0, 0, 0.12);
-    font-weight: 600;
     cursor: pointer;
 }
 .pizarra-img {
     width: 1.5rem;
     height: 1.5rem;
     margin: .5rem .5rem .5rem 0;
-    padding-right: 2rem;
-}
-.graficos {
-    grid-area: graficos;
-    padding-left: 1rem;
-    display: flex;
-    align-items: center;
-    font-size: 0.9em;
-    color: #f8f8f8;
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
-    transition: .2s ease-in-out;
-}
-.graficos:hover {
-    background-color: rgba(0, 0, 0, 0.12);
-    font-weight: 600;
-    cursor: pointer;
-}
-.graficos-img {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 3% 3% 3% 0;
     padding-right: 2rem;
 }
 .categorias {
@@ -91,7 +69,6 @@
 }
 .categorias:hover {
     background-color: rgba(0, 0, 0, 0.12);
-    font-weight: 600;
     cursor: pointer;
 }
 .categorias-img {
@@ -112,7 +89,6 @@
 }
 .salir:hover {
     background-color: rgba(0, 0, 0, 0.12);
-    font-weight: 600;
     cursor: pointer;
 }
 .salir-img {
