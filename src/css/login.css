@@ -10,7 +10,7 @@
 /* COLORES*/
 
 :root {
-    --white: #f8f8f8;
+    --white: #ffffff;
     --lightblue: #b0d8da;
     --lightbluealt: #6ea6a9;
     --lightgrey: #d9d9d9;
@@ -61,7 +61,7 @@ body {
     width: auto;
     height: 4rem;
     margin: 1rem;
-    font-size: 2.2vw;
+    font-size: 1.5rem;
     color: var(--white);
 }
 .imagen {
@@ -149,7 +149,7 @@ body {
     flex-direction: column;
 }
 .login-text h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--darkblue);
     margin: 0 0 1rem 0;
 }
@@ -201,7 +201,7 @@ body {
     font-size: 1rem;
     font-weight: 500;
     background-color: var(--darkblue);
-    color: #fff;
+    color: var(--white);
     transition: all ease-in-out .2s;
 }
 .btn:hover {
@@ -214,6 +214,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
     }
     .container {
         display: flex;
@@ -257,13 +258,12 @@ body {
     }
     .welcome-text h1 {
         display: flex;
-        color: #fff;
-        margin: 1rem 0 2rem 0;
+        color: var(--white);
     }
     .welcome-text p {
         display: flex;
         flex-direction: column;
-        color: #fff;
+        color: var(--white);
         line-height: 1.5rem;
         letter-spacing: 1px;
     }
@@ -275,7 +275,6 @@ body {
     .buttons {
         display: flex;
         flex-direction: column;
-        margin: 2rem 0 0 0;
     }
     .buttons input {
         width: 100%;
@@ -287,15 +286,15 @@ body {
     .buttons input:nth-child(1) {
         font-weight: 600;
         font-size: 1rem;
-        background-color: #fff;
+        background-color: var(--white);
         color: var(--darkblue);
     }
     .buttons input:nth-child(2) {
         font-weight: 600;
         font-size: 1rem;
-        border: 3px solid #fff;
+        border: 3px solid var(--white);
         background-color: transparent;
-        color: #fff;
+        color: var(--white);
     }
     .form-container {
         display: none;
@@ -345,7 +344,7 @@ body {
         margin: 2rem 0 0 0;
         font-size: 1rem;
         background-color: var(--darkblue);
-        color: #fff;
+        color: var(--white);
     }
     .new-account {
         font-size: 1rem;

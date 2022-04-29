@@ -29,9 +29,9 @@
     cursor: context-menu;
 }
 .fecha p {
-    font-size: 2.2vw;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: #1a132f;
+    color: var(--darkblue);
 }
 
 /* ITEMS - INGRESOS - EGRESOS - BALANCE */
@@ -76,13 +76,13 @@
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "items-number";
     padding-left: .5rem;
-    font-size: 0.9em;
+    font-size: .8rem;
 }
 .items-number {
     grid-area: items-number;
     display: flex;
     align-self: center;
-    font-size: 0.9em;
+    font-size: .8rem;
 }
 #cantidad {
     width: 2rem;
@@ -118,13 +118,13 @@
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "ingresos-number";
     padding-left: .5rem;
-    font-size: 0.9em;
+    font-size: .8rem;
 }
 .ingresos-number {
     grid-area: ingresos-number;
     display: flex;
     align-self: center;
-    font-size: 0.9em;
+    font-size: .8rem;
 }
 .egresos-container {
     grid-area: egresos-container;
@@ -153,13 +153,13 @@
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "egresos-number";
     padding-left: .5rem;
-    font-size: 0.9em;
+    font-size: .8rem;
 }
 .egresos-number {
     grid-area: egresos-number;
     display: flex;
     align-self: center;
-    font-size: 0.9em;
+    font-size: .8rem;
 }
 .balance-container {
     grid-area: balance-container;
@@ -188,13 +188,13 @@
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "balance-number";
     padding-left: .5rem;
-    font-size: 0.9em;
+    font-size: .8rem;
 }
 .balance-number {
     grid-area: balance-number;
     display: flex;
     align-self: center;
-    font-size: 0.9em;
+    font-size: .8rem;
 }
 .espacio-vacio {
     grid-area: espacio-vacio;
@@ -214,7 +214,7 @@
     grid-template-rows: 1fr;
     grid-template-columns: 7fr 7fr 7fr 7fr 1fr;
     grid-template-areas: "tipo categoria nombre monto vacio";
-    font-size: 0.9em;
+    font-size: .8rem;
     color: rgb(48, 48, 48);
 }
 .tipo {
@@ -238,7 +238,7 @@
     align-items: center;
     margin: 1rem 0 0 0;
     padding-left: .2rem;
-    color: #f8f8f8;
+    color: var(--white);
     justify-content: space-between;
-    font-size: 0.9em;
+    font-size: .8rem;
 }

@@ -211,14 +211,6 @@ let filas = document.querySelector("#tabla");
 let secciones = document.querySelector("#seccion-categorias");
 let titulo = document.querySelector("#titulo-cat");
 
-function ocultarElementosGraficos() {
-  datos.style.display = "none";
-  tabla.style.display = "none";
-  filas.style.display = "none";
-  titulo.style.display = "none";
-  secciones.style.display = "none";
-}
-
 function ocultarElementos() {
   datos.style.display = "none";
   tabla.style.display = "none";

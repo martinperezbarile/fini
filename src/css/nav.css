@@ -34,17 +34,17 @@
     grid-area: texto;
     display: flex;
     align-items: center;
-    font-size: 0.9em;
+    font-size: .9rem;
     padding-left: 1rem;
-    color: #f8f8f8;
+    color: var(--white);
 }
 .pizarra {
     grid-area: pizarra;
     padding-left: 1rem;
     display: flex;
     align-items: center;
-    font-size: 0.9em;
-    color: #f8f8f8;
+    font-size: .9rem;
+    color: var(--white);
     transition: .2s ease-in-out;
 }
 .pizarra:hover {
@@ -62,8 +62,8 @@
     padding-left: 1rem;
     display: flex;
     align-items: center;
-    font-size: 0.9em;
-    color: #f8f8f8;
+    font-size: .9rem;
+    color: var(--white);
     border-top: 1px solid rgba(0, 0, 0, 0.12);
     transition: .2s ease-in-out;
 }
@@ -82,8 +82,8 @@
     padding-left: 1rem;
     display: flex;
     align-items: center;
-    font-size: 0.9em;
-    color: #f8f8f8;
+    font-size: .9rem;
+    color: var(--white);
     border-top: 1px solid rgba(0, 0, 0, 0.12);
     transition: .2s ease-in-out;
 }
