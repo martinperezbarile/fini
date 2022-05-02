@@ -6,13 +6,13 @@
         background-color: var(--white);
     }
     .header {
-        height: 10rem;
-        background-color: var(--lightbluealt);
+        height: 11rem;
+        background-color: var(--darkblue);
         padding: 0;
     }
     .grid-header {
         width: 100%;
-        height: 2.5rem;
+        height: 0;
         border-radius: 0 0 42px 42px;
         display: grid;
         grid-template: "tabla-base";
@@ -23,45 +23,15 @@
         padding: 1rem 1rem 0 1rem;
     }
     .logo {
-        width: 4rem;
-        height: 4rem;
-        padding: 0;
+        width: 2rem;
+        height: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 50%;
-        background-color: var(--white);
     }
     .logo img {
         width: 2rem;
         height: 2rem;
-    }
-    .usuario {
-        width: 4rem;
-        height: 4rem;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        border-radius: 50%;
-        background-color: var(--white);
-        box-shadow: 0px 0px 12px -2px var(--clr);
-    }
-    .usuario a {
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .usuario a .icon {
-        position: relative;
-        display: block;
-        line-height: 75px;
-        font-size: 2em;
-        color: var(--darkblue);
-        text-align: center;
-        transition: 0.5s;
-        color: var(--clr);
     }
     .grid-datos {
         display: none;
@@ -89,16 +59,9 @@
         display: none;
     }
     .tabla-base {
-        background-color: var(--white);
         grid-area: "tabla-base";
         height: 3rem;
-        margin: 1rem;
-        border-radius: 1rem;
-        background-color: var(--white);
-        box-shadow: 0px 0px 9px 0px var(--lightgrey);
-    }
-    .tabla-container {
-        margin-top: 4rem;
+        background-color: var(--darkblue);
     }
     .fila-container {
         height: 3rem;
@@ -111,7 +74,7 @@
     .grid-tabla {
         align-items: center;
         font-size: 0.9em;
-        color: var(--clr);
+        color: var(--white);
         display: flex;
         justify-content: space-between;
         padding: 0.5rem 2rem 0.5rem 2rem;
@@ -121,49 +84,29 @@
         display: none;
     }
     .main {
-        padding: 0 1rem 0 1rem;
-    }
-    .titulo-graf {
-        display: none;
-        font-size: 1rem;
-        font-weight: 600;
-        color: var(--darkblue);
-        margin-top: -7rem;
-    }
-    .graficos-chart {
-        display: none;
-        flex-direction: column;
-        width: 32vw;
-        height: auto;
-    }
-    .canvas {
-        padding: 1rem;
+        padding: 0;
     }
     .titulo-cat {
         display: none;
         font-size: 1rem;
         font-weight: 600;
         color: var(--darkblue);
-        margin-top: 1rem;
-        margin-bottom: 0;
+        margin: 1rem 0 0 1rem;
+        padding-bottom: 0;
+        border: none;
     }
     .seccion-categorias {
         width: 100%;
-        height: 20rem;
+        height: 33.5rem;
         display: none;
-        padding: 1rem 0 1rem 0;
-        flex-wrap: wrap;
+        padding: 1rem;
         justify-content: space-between;
     }
     .cat {
-        width: 32%;
-        height: 4rem;
-        margin: 0 0 1rem 0;
+        height: 3rem;
         padding: 1rem;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        margin-top: .5rem;
         border-radius: .5rem;
         background: var(--white);
         color: var(--darkblue);
@@ -171,9 +114,12 @@
     }
     .cat-icon {
         margin: 0;
-        font-size: 1.5rem;
+        padding: 0 1rem 0 0;
+        font-size: 1rem;
+        border-right: 0;
     }
     .tipo-cat {
+        padding: 0;
         font-size: .8rem;
     }
     .menu {
@@ -183,7 +129,7 @@
         position: fixed;
         width: 100%;
         height: 70px;
-        background: var(--clr);
+        background: var(--darkblue);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -222,7 +168,7 @@
     }
     .menu-mobile ul li.active a .icon {
         transform: translateY(-32px);
-        color: var(--clr);
+        color: #000;
     }
     .menu-mobile ul li a .text {
         position: absolute;
@@ -243,7 +189,7 @@
         top: -50%;
         width: 70px;
         height: 70px;
-        background: var(--lightbluealt);
+        background: var(--lightblue);
         border-radius: 50%;
         border: 6px solid var(--white);
         transition: 0.5s;

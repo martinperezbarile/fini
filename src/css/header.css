@@ -12,13 +12,13 @@
         "fecha-container" 5rem "datos" 5rem "tabla-base" 2.5rem;
 }
 
-/* FECHA */
+/* FECHA Y CLIMA*/
 
 .fecha-container {
     grid-area: fecha-container;
     display: grid;
     grid-template-areas:
-        "fecha espacio-extra";
+        "fecha clima";
 }
 .fecha {
     grid-area: fecha;
@@ -33,7 +33,21 @@
     font-weight: 600;
     color: var(--darkblue);
 }
-
+.clima {
+    grid-area: clima;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.clima:hover {
+    cursor: context-menu;
+}
+.clima p {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: right;
+    color: var(--darkblue);
+}
 /* ITEMS - INGRESOS - EGRESOS - BALANCE */
 
 .datos {

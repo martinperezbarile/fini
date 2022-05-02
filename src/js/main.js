@@ -1,3 +1,35 @@
+//API ubicacion y clima
+
+//declaro una constante con el valor de la temperatura en grados kelvin, ya que la api utiliza esa medicion por defecto
+const kelvin = 273.15;
+
+const obtenerClima = () => {
+  let ciudad = "Argentina";
+  let pais = "AR";
+
+  consultarAPI(ciudad, pais);
+}
+
+const consultarAPI = async (ciudad, pais) => {
+  const apiKey = "14b998e11d412cab5b7d0dffc9be38f1";
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${apiKey}`;
+  const respuesta = await fetch(url);
+  const resultado = await respuesta.json();
+
+  const {
+    name,
+    main
+  } = resultado;
+
+  let divResultado = document.querySelector("#clima");
+  //cálculo para convertir grados kelvin a celsius - el codigo &#x2103 aplica el simbolo de grados
+  divResultado.innerHTML = `
+    <p>${name}</br>${parseFloat(main.temp-kelvin,10).toFixed(2) } <span> &#x2103;</span></p>
+    `;
+}
+
+obtenerClima();
+
 //Funcion para abrir modal popup
 
 const abrirBotonesModal = document.querySelectorAll('[data-modal-target]')
@@ -95,6 +127,33 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   )
 })
+
+function dataMobile() {
+
+  let cantidadWeb = document.getElementById("cantidad");
+  let cantidadMobile = document.getElementById("cantidad-mobile");
+  let ingresosWeb = document.getElementById("valor-ingresos");
+  let ingresosMobile = document.getElementById("valor-ingresos-mobile");
+  let egresosWeb = document.getElementById("valor-egresos");
+  let egresosMobile = document.getElementById("valor-egresos-mobile");
+  let balanceWeb = document.getElementById("valor-balance");
+  let balanceMobile = document.getElementById("valor-balance-mobile");
+
+  cantidadMobile.innerText = cantidadWeb;
+
+  let sumaIngresos = 0;
+  objetoArray.forEach(elem => sumaIngresos += elem.ingreso);
+  ingresos.innerText = "$" + sumaIngresos;
+
+  let sumaEgresos = 0;
+  objetoArray.forEach(elem => sumaEgresos += elem.egreso);
+  egresos.innerText = "$" + sumaEgresos;
+
+  let operacionBalance = sumaIngresos - sumaEgresos;
+  balance.innerText = "$" + operacionBalance;
+
+  insertarFilaEnFormulario(elementoArray)
+}
 
 //Funcion que asigna ID a elemento TR (fila)
 
