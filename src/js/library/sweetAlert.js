@@ -5,7 +5,7 @@ Swal.fire({
     showConfirmButton: false,
     text: "Haz click en el botón + para agregar items",
     footer: "Administra tus finanzas de manera simple, agil e intuitiva",
-    timer: 7000,
+    timer: 5000,
     timerProgressBar: true,
     backdrop: true,
     allowOutsideClick: true,
@@ -13,6 +13,6 @@ Swal.fire({
     allowEnterKey: true,
     background: "#1a132f",
     color: '#f8f8f8',
-    imageUrl: "./img/logo-fondo.png",
+    imageUrl: "./src/img/logo-swal.png",
     imageWidth: "4rem"
 });

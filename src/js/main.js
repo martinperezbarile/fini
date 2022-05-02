@@ -6,7 +6,6 @@ const kelvin = 273.15;
 const obtenerClima = () => {
   let ciudad = "Argentina";
   let pais = "AR";
-
   consultarAPI(ciudad, pais);
 }
 
@@ -23,9 +22,7 @@ const consultarAPI = async (ciudad, pais) => {
 
   let divResultado = document.querySelector("#clima");
   //cálculo para convertir grados kelvin a celsius - el codigo &#x2103 aplica el simbolo de grados
-  divResultado.innerHTML = `
-    <p>${name}</br>${parseFloat(main.temp-kelvin,10).toFixed(2) } <span> &#x2103;</span></p>
-    `;
+  divResultado.innerHTML = `<p>${name}</br>${parseFloat(main.temp-kelvin,10).toFixed(2)} <span> &#x2103;</span></p>`;
 }
 
 obtenerClima();
@@ -286,20 +283,40 @@ function mostrarElementos() {
   titulo.style.display = "none";
 }
 
-function mostrarElementosInicioMD() {
+function ocultarElementosGraficos() {
+  datos.style.display = "none";
+  tabla.style.display = "none";
+  filas.style.display = "none";
+  titulo.style.display = "none";
+  secciones.style.display = "none";
+}
+
+function elementosMobileDesign() {
   tabla.style.display = "table";
   filas.style.display = "table";
   secciones.style.display = "none";
   titulo.style.display = "none";
 }
 
-function mostrarElementosInicioWD() {
+function elementosWebDesign() {
   datos.style.display = "block";
   tabla.style.display = "table";
   filas.style.display = "table";
   secciones.style.display = "none";
   titulo.style.display = "none";
 }
+
+//FUNCION PARA ANIMAR MENU MOBILE DESIGN
+
+const list = document.querySelectorAll('.list');
+
+function activeLink() {
+    list.forEach((item) =>
+        item.classList.remove('active'));
+    this.classList.add('active');
+}
+list.forEach((item) =>
+    item.addEventListener('click', activeLink));
 
 //FUNCION BOTON "SALIR"
 

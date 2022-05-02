@@ -132,7 +132,7 @@
     <div class="menu-mobile">
         <ul>
             <li class="list">
-                <a onclick="mostrarElementosInicioMD()">
+                <a onclick="elementosMobileDesign()">
                     <span class="icon">
                         <ion-icon name="home-outline"></ion-icon>
                     </span>
@@ -140,7 +140,7 @@
                 </a>
             </li>
             <li class="list">
-                <a>
+                <a onclick="ocultarElementosGraficos()">
                     <span class="icon">
                         <ion-icon name="pie-chart-outline"></ion-icon>
                     </span>
@@ -148,7 +148,7 @@
                 </a>
             </li>
             <li class="list active" data-modal-target="#modal-agregar">
-                <a onclick="mostrarElementosInicioMD()" data-modal-target="#modal-agregar">
+                <a onclick="elementosMobileDesign()" data-modal-target="#modal-agregar">
                     <span class="icon">
                         <ion-icon name="add-circle-outline"></ion-icon>
                     </span>
@@ -322,7 +322,7 @@
 
     <footer class="footer">
         <div id="btn-agregar" class="btn-agregar" data-modal-target="#modal-agregar"
-            onclick="mostrarElementosInicioWD()">
+            onclick="elementosWebDesign()">
             <img src="./src/img/añadir.png" alt="">
         </div>
     </footer>
@@ -338,7 +338,7 @@
 
     <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./js/library/sweetAlert.js"></script>
+    <script src="./src/js/library/sweetAlert.js"></script>
 
     <!-- Ionic Icons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
