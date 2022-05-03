@@ -57,7 +57,7 @@ function loginFunction(e) {
     if(user == null) {
         result.innerHTML = "Email incorrecto"
     }else if (email == data.email && password == data.password){
-        window.location="main.html"
+        window.location="main.html";
     }else {
         result.innerHTML = "Contraseña incorrecta";
     }

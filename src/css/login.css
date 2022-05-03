@@ -202,11 +202,22 @@ body {
     font-weight: 500;
     background-color: var(--darkblue);
     color: var(--white);
-    transition: all ease-in-out .2s;
+    transition: all ease-in-out .1s;
 }
 .btn:hover {
     cursor: pointer;
-    background-color: var(--lightbluealt);
+    background-color: var(--lightblue);
+    color: var(--darkblue);
+    font-weight: bold;
+}
+.btn:active {
+    background-color: var(--lightblue);
+    color: var(--darkblue);
+    font-weight: bold;
+    border-top: 3px solid var(--darkblue);
+    border-left: 3px solid var(--darkblue);
+    transform: translateX(-2px);
+    transform: translateY(2px);
 }
 
 @media only screen and (max-width: 1140px) {

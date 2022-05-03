@@ -56,7 +56,6 @@
 .grid-datos {
     height: 100%;
     display: grid;
-
     align-items: center;
     grid-template-rows: 1fr;
     grid-template-columns: 7fr 7fr 7fr 7fr 1fr;

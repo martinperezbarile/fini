@@ -136,20 +136,10 @@ function dataMobile() {
   let balanceWeb = document.getElementById("valor-balance");
   let balanceMobile = document.getElementById("valor-balance-mobile");
 
-  cantidadMobile.innerText = cantidadWeb;
-
-  let sumaIngresos = 0;
-  objetoArray.forEach(elem => sumaIngresos += elem.ingreso);
-  ingresos.innerText = "$" + sumaIngresos;
-
-  let sumaEgresos = 0;
-  objetoArray.forEach(elem => sumaEgresos += elem.egreso);
-  egresos.innerText = "$" + sumaEgresos;
-
-  let operacionBalance = sumaIngresos - sumaEgresos;
-  balance.innerText = "$" + operacionBalance;
-
-  insertarFilaEnFormulario(elementoArray)
+  cantidadMobile.innerText = cantidadWeb.value;
+  ingresosMobile.innerText = "hola";
+  egresosMobile.innerText = egresosWeb.value;
+  balanceMobile.innerText = balanceWeb;
 }
 
 //Funcion que asigna ID a elemento TR (fila)
@@ -306,7 +296,7 @@ function elementosWebDesign() {
   titulo.style.display = "none";
 }
 
-//FUNCION PARA ANIMAR MENU MOBILE DESIGN
+//Animacion menu mobile design
 
 const list = document.querySelectorAll('.list');
 
@@ -318,7 +308,7 @@ function activeLink() {
 list.forEach((item) =>
     item.addEventListener('click', activeLink));
 
-//FUNCION BOTON "SALIR"
+//Funcion Salir
 
 function salir() {
   let variableSalir = document.getElementById("salir");
