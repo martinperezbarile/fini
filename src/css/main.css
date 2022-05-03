@@ -27,7 +27,7 @@ body {
 .main-container {
     display: grid;
     grid-template:
-        "header" 11rem "main" auto "footer" 10%;
+        "header" 8rem "main" auto "footer" 10%;
 }
 .main {
     grid-area: main;

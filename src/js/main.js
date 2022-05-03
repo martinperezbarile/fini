@@ -125,23 +125,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   )
 })
 
-function dataMobile() {
-
-  let cantidadWeb = document.getElementById("cantidad");
-  let cantidadMobile = document.getElementById("cantidad-mobile");
-  let ingresosWeb = document.getElementById("valor-ingresos");
-  let ingresosMobile = document.getElementById("valor-ingresos-mobile");
-  let egresosWeb = document.getElementById("valor-egresos");
-  let egresosMobile = document.getElementById("valor-egresos-mobile");
-  let balanceWeb = document.getElementById("valor-balance");
-  let balanceMobile = document.getElementById("valor-balance-mobile");
-
-  cantidadMobile.innerText = cantidadWeb.value;
-  ingresosMobile.innerText = "hola";
-  egresosMobile.innerText = egresosWeb.value;
-  balanceMobile.innerText = balanceWeb;
-}
-
 //Funcion que asigna ID a elemento TR (fila)
 
 function obtenerNuevoId() {
@@ -282,7 +265,8 @@ function ocultarElementosGraficos() {
 }
 
 function elementosMobileDesign() {
-  tabla.style.display = "table";
+  datos.style.display = "block";
+  tabla.style.display = "none";
   filas.style.display = "table";
   secciones.style.display = "none";
   titulo.style.display = "none";
