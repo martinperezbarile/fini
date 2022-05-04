@@ -226,6 +226,7 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        padding: 4rem 0 0 0;
     }
     .container {
         display: flex;
@@ -238,6 +239,7 @@ body {
         justify-content: center;
         width: 6rem;
         height: 6rem;
+        margin: 0;
     }
     .logo img {
         width: 4rem;
@@ -249,13 +251,13 @@ body {
     /* WELCOME */
     .img {
         width: 100%;
-        height: 18rem;
+        height: 16rem;
         display: flex;
         justify-content: center;
     }
     .img img {
         display: flex;
-        width: 40vh;
+        width: 35vh;
         height: auto;
     }
     .welcome {
@@ -361,10 +363,12 @@ body {
         border-radius: 8px;
     }
     .new-account {
-        font-size: .9rem;
+        font-size: 1rem;
+        padding: 0 0 4rem 0;
     }
     .login-account {
-        font-size: 1rem;
+        font-size: .9rem;
+        padding: 0 0 4rem 0;
     }
     .login-account a {
         text-decoration: none;
