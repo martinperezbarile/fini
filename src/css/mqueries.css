@@ -34,27 +34,71 @@
         height: 2rem;
     }
     .grid-datos {
-        padding: 1rem 0 1rem 0;
+        padding: 1rem;
         grid-template-rows: 1fr;
         grid-template-columns: 7fr 7fr 7fr 7fr;
         grid-template-areas: "items-container ingresos-container egresos-container balance-container";
         background-color: var(--darkblue);
         color: var(--white);
     }
-    .datos {
-        
+    .items-container {
+        grid-template-columns: 1fr 1fr;
     }
     .items-icon {
         color: var(--white);
+        font-size: 1.5rem;
+    }
+    .items-text {
+        display: flex;
+        align-items: center;
+    }
+    .items-number {
+        display: none;
+    }
+    .ingresos-container {
+        grid-template-columns: 1fr 1fr;
     }
     .ingresos-icon {
         color: var(--white);
+        font-size: 1.5rem;
+    }
+    .ingresos-text {
+        display: flex;
+        align-items: center;
+        padding: 0 1rem 0 .5rem;
+    }
+    .ingresos-number {
+        display: none;
+    }
+    .egresos-container {
+        grid-template-columns: 1fr 1fr;
     }
     .egresos-icon {
         color: var(--white);
+        font-size: 1.5rem;
+    }
+    .egresos-text {
+        display: flex;
+        align-items: center;
+        padding: 0 1rem 0 .5rem;
+    }
+    .egresos-number {
+        display: none;
+    }
+    .balance-container {
+        grid-template-columns: 1fr 1fr;
     }
     .balance-icon {
         color: var(--white);
+        font-size: 1.5rem;
+    }
+    .balance-text {
+        display: flex;
+        align-items: center;
+        padding: 0 1rem 0 .5rem;
+    }
+    .balance-number {
+        display: none;
     }
     .tabla-base {
         display: none;
@@ -62,8 +106,8 @@
     .fila-container {
         height: 3rem;
         border-radius: 1rem;
-        margin-top: 1rem;
-        padding-right: .5rem;
+        padding-right: 1rem;
+        margin: 1rem 0 0 0 ;
         background-color: var(--white);
         box-shadow: 0px 0px 9px 0px var(--lightgrey);
     }
