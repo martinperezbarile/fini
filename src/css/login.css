@@ -291,7 +291,6 @@ body {
     .buttons {
         display: flex;
         flex-direction: column;
-        padding: 0 0 6rem 0;
     }
     .buttons input {
         width: 100%;
