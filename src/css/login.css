@@ -348,7 +348,7 @@ body {
     .input {
         height: 2.5rem;
         font-size: 1rem;
-        margin: 1rem 0 1rem 0;
+        margin: .5rem 0 1rem 0;
         background-color:rgb(240, 240, 240);
         border-bottom: 0;
     }
@@ -361,7 +361,7 @@ body {
         border-radius: 8px;
     }
     .new-account {
-        font-size: 1rem;
+        font-size: .9rem;
     }
     .login-account {
         font-size: 1rem;
