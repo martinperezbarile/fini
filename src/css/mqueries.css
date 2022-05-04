@@ -210,7 +210,7 @@
         color: var(--white);
     }
     .menu-mobile ul li.active a .icon {
-        transform: translateY(-32px);
+        transform: translateY(-33px) scale(1.2);
         color: #000;
     }
     .menu-mobile ul li a .text {
