@@ -330,7 +330,7 @@ body {
     .login-text h1 {
         width: 100%;
         font-size: 1.2rem;
-        margin: 0 0 1rem 0;
+        margin: 2rem 0 .5rem 0;
         color: var(--darkblue);
     }
     .login-text p {
