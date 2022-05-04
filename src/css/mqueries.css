@@ -3,7 +3,7 @@
 /* DISPOSITIVOS CHICOS (phones, 600px and down) */
 @media only screen and (max-width: 690px) {
     body {
-        background-color: var(--white);
+        background-color: #f4f4f4;
     }
     .header {
         height: 8rem;
@@ -104,10 +104,11 @@
         display: none;
     }
     .fila-container {
+        width: calc(100% - 32px);
         height: 3rem;
         border-radius: 1rem;
         padding-right: 1rem;
-        margin: 1rem 0 0 0 ;
+        margin: 1rem;
         background-color: var(--white);
         box-shadow: 0px 0px 9px 0px var(--lightgrey);
     }
@@ -231,7 +232,7 @@
         height: 70px;
         background: var(--lightblue);
         border-radius: 50%;
-        border: 6px solid var(--white);
+        border: 6px solid #f4f4f4;
         transition: 0.5s;
     }
     .indicator::before {
@@ -243,7 +244,7 @@
         height: 20px;
         background: transparent;
         border-top-right-radius: 20px;
-        box-shadow: 1px -10px 0 0 var(--white);
+        box-shadow: 1px -10px 0 0 #f4f4f4;
     }
     .indicator::after {
         content: '';
@@ -254,7 +255,7 @@
         height: 20px;
         background: transparent;
         border-top-left-radius: 20px;
-        box-shadow: -1px -10px 0 0 var(--white);
+        box-shadow: -1px -10px 0 0 #f4f4f4;
     } 
     .menu-mobile ul li:nth-child(1).active~.indicator {
         transform: translateX(calc(70px * 0));
