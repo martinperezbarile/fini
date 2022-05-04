@@ -9,6 +9,7 @@
         height: 8rem;
         background-color: var(--darkblue);
         padding: 0;
+        border-radius: 0 0 1rem 1rem;
     }
     .grid-header {
         width: 100%;
@@ -38,7 +39,7 @@
         grid-template-rows: 1fr;
         grid-template-columns: 7fr 7fr 7fr 7fr;
         grid-template-areas: "items-container ingresos-container egresos-container balance-container";
-        background-color: var(--darkblue);
+        background-color: transparent;
         color: var(--white);
     }
     .items-container {
