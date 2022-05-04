@@ -356,7 +356,7 @@ body {
     }
     .btn {
         height: 2.5rem;
-        margin: 1rem 0 0 0;
+        margin: .5rem 0 0 0;
         font-size: 1rem;
         background-color: var(--darkblue);
         color: var(--white);
@@ -364,11 +364,11 @@ body {
     }
     .new-account {
         font-size: 1rem;
-        padding: 0 0 4rem 0;
+        padding: 1rem 0 4rem 0;
     }
     .login-account {
         font-size: .9rem;
-        padding: 0 0 4rem 0;
+        padding: 1rem 0 4rem 0;
     }
     .login-account a {
         text-decoration: none;
